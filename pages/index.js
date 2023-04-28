@@ -624,7 +624,7 @@ export default function Home({ publications }) {
                 </div>
                 <div className="flex w-full h-full mb-4 md:pl-8 md:w-2/5 md:mb-0">
                   <Image
-                    src="../headshot-with-frame-2.jpg"
+                    src="/headshot-with-frame-2.jpg"
                     className="overflow-hidden rounded-md"
                     width={880}
                     height={880}
@@ -793,7 +793,7 @@ export default function Home({ publications }) {
                 flexDirection={`flex-col lg:flex-row-reverse`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"../projects/fitnezzy.jpg"}
+                imgSrc={"./public/projects/fitnezzy.jpg"}
                 liveLink={"https://apps.apple.com/fr/app/fitnezzy/id1518546961"}
                 repoLink={null}
                 stack={
@@ -840,7 +840,7 @@ export default function Home({ publications }) {
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"../projects/Gsbcontext.png"}
+                imgSrc={"./public/projects/Gsbcontext.png"}
                 liveLink={null}
                 repoLink={"https://github.com/kellerM42/GsbAppWeb"}
                 stack={
@@ -904,7 +904,7 @@ export default function Home({ publications }) {
                 flexDirection={`flex-col lg:flex-row-reverse`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"../projects/unit.png"}
+                imgSrc={"./public/projects/unit.png"}
                 liveLink={null}
                 repoLink={"https://github.com/kellerM42/Unilever_App"}
                 stack={
@@ -967,7 +967,7 @@ export default function Home({ publications }) {
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"../projects/gsbAndroid.PNG"}
+                imgSrc={"./public/projects/gsbAndroid.PNG"}
                 liveLink={null}
                 repoLink={"https://github.com/kellerM42/GsbApp"}
                 stack={
