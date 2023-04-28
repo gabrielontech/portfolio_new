@@ -793,7 +793,7 @@ export default function Home({ publications }) {
                 flexDirection={`flex-col lg:flex-row-reverse`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/public/projects/fitnezzy.jpg"}
+                imgSrc={"/projects/fitnezzy.jpg"}
                 liveLink={"https://apps.apple.com/fr/app/fitnezzy/id1518546961"}
                 repoLink={null}
                 stack={
@@ -840,7 +840,7 @@ export default function Home({ publications }) {
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/public/projects/Gsbcontext.png"}
+                imgSrc={"/projects/Gsbcontext.png"}
                 liveLink={null}
                 repoLink={"https://github.com/kellerM42/GsbAppWeb"}
                 stack={
@@ -904,7 +904,7 @@ export default function Home({ publications }) {
                 flexDirection={`flex-col lg:flex-row-reverse`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/public/projects/unit.png"}
+                imgSrc={"/projects/unit.png"}
                 liveLink={null}
                 repoLink={"https://github.com/kellerM42/Unilever_App"}
                 stack={
@@ -967,7 +967,7 @@ export default function Home({ publications }) {
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/public/projects/gsbAndroid.PNG"}
+                imgSrc={"/projects/gsbAndroid.PNG"}
                 liveLink={null}
                 repoLink={"https://github.com/kellerM42/GsbApp"}
                 stack={
