@@ -219,7 +219,7 @@ export default function Home({ publications }) {
       >
         <Head>
           <script type="module" src="index.js"></script>
-          <title>Gabriel Kitoko | Frontend Developer & Designer</title>
+          <title>Gabriel Kitoko | Frontend Developer</title>
           <meta
             name="description"
             content="The portfolio of frontend developer and designer, Gabriel Kitoko"
