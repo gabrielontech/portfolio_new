@@ -11,8 +11,8 @@ export const projects = [
   {
     title: "Minishell",
     overview:
-      "A single-page application that helps filmmakers learn more about who their film might be suitable for.",
-    stack: ["Html", "React", "Sass"],
+      "MiniShell will introduce you to the world of shells, which provide a convenient text interface to interact with your system. Shells might seem very easy to understand but have very specific and defined behaviour in almost every single case, most of which will need to be handled properly.",
+    stack: ["Unix", "C", "Makefile"],
     link: null,
     repo: "https://github.com/Minishellou/minishell",
     isSiteLive: true,
