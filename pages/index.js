@@ -1040,7 +1040,7 @@ export default function Home({ publications }) {
                 <p className="text-lg">
                   Email me at{" "}
                   <Link
-                    href="mailto:gabrielekeller19@protonmail.com"
+                    href="mailto:freelance@gabrielkitoko.com"
                     className="underline-link"
                   >
                     freelance@gabrielkitoko.com
