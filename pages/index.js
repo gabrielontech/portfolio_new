@@ -222,7 +222,7 @@ export default function Home({ publications }) {
           <title>Gabriel Kitoko | Frontend Developer</title>
           <meta
             name="description"
-            content="The portfolio of frontend developer and designer, Gabriel Kitoko"
+            content="The portfolio of frontend developer, Gabriel Kitoko"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -536,7 +536,7 @@ export default function Home({ publications }) {
             <div className="container relative flex flex-col items-start justify-center flex-grow px-0 mx-auto md:px-20 lg:px-24 section">
               <div className="w-full">
                 <span className="text-2xl font-semibold text-brand">
-                  Hello! 👋 My name is
+                  Hello ! 👋🏾 My name is
                 </span>
 
                 <h1 className="mb-4 text-5xl md:text-7xl dark:text-white text-dark">
