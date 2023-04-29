@@ -3,7 +3,7 @@ export const projects = [
     title: "Cub3D",
     overview:
       "Cub3D is a clone of the famous first-person shooter Wolfenstein 3D, released in 1992.",
-    stack: ["C Programming", "Makefile"],
+    stack: ["C", "Makefile"],
     link: null,
     repo: "https://github.com/KicassOS/cub3D",
     isSiteLive: true,
