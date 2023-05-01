@@ -540,7 +540,7 @@ export default function Home({ publications }) {
                 </span>
 
                 <h1 className="mb-4 text-5xl md:text-7xl dark:text-white text-dark">
-                  Gabriel onTech
+                  Gabriel OnTech
                 </h1>
                 <h2 className="mb-4 text-3xl md:text-4xl dark:text-light text-mid">
                   <ReactTypingEffect
