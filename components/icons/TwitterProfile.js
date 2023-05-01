@@ -4,7 +4,7 @@ const TwitterProfile = ({ marginBottom }) => {
   return (
     <div className={`w-8 h-8 ${marginBottom}`}>
       <a
-        href="https://twitter.com/KellerM42"
+        href="https://twitter.com/gabrielontech"
         target="_blank"
         rel="noreferrer"
       >
