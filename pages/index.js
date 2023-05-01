@@ -219,10 +219,10 @@ export default function Home({ publications }) {
       >
         <Head>
           <script type="module" src="index.js"></script>
-          <title>Gabriel Kitoko | Frontend Developer</title>
+          <title>Gabriel OnTech | Frontend Developer</title>
           <meta
             name="description"
-            content="The portfolio of frontend developer, Gabriel Kitoko"
+            content="The portfolio of frontend developer, Gabriel OnTech"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -402,7 +402,7 @@ export default function Home({ publications }) {
             {/* Text */}
             <div className="flex items-center ml-4">
               <p className="text-lg font-semibold font-display tracking-tight dark:text-white text-darker mb-0 transition-all duration-150 ease-in-out">
-                Gabriel Kitoko
+                Gabriel OnTech
               </p>
             </div>
             {/* Nav */}
@@ -536,11 +536,11 @@ export default function Home({ publications }) {
             <div className="container relative flex flex-col items-start justify-center flex-grow px-0 mx-auto md:px-20 lg:px-24 section">
               <div className="w-full">
                 <span className="text-2xl font-semibold text-brand">
-                  Hello ! 👋🏾 My name is
+                  Hi there 👋🏾
                 </span>
 
                 <h1 className="mb-4 text-5xl md:text-7xl dark:text-white text-dark">
-                  Gabriel Kitoko
+                  Gabriel onTech
                 </h1>
                 <h2 className="mb-4 text-3xl md:text-4xl dark:text-light text-mid">
                   <ReactTypingEffect
@@ -628,7 +628,7 @@ export default function Home({ publications }) {
                     className="overflow-hidden rounded-md"
                     width={880}
                     height={880}
-                    alt={"Gabriel Kitoko headshot"}
+                    alt={"Gabriel OnTech headshot"}
                   />
                 </div>
               </div>
@@ -842,7 +842,7 @@ export default function Home({ publications }) {
                 imgHeight={"666"}
                 imgSrc={"/projects/Gsbcontext.png"}
                 liveLink={null}
-                repoLink={"https://github.com/kellerM42/GsbAppWeb"}
+                repoLink={"https://github.com/gabrielontech/GsbAppWeb"}
                 stack={
                   <>
                     <Icon
@@ -906,7 +906,7 @@ export default function Home({ publications }) {
                 imgHeight={"666"}
                 imgSrc={"/projects/unit.png"}
                 liveLink={null}
-                repoLink={"https://github.com/kellerM42/Unilever_App"}
+                repoLink={"https://github.com/gabrielontech/Unilever_App"}
                 stack={
                   <>
                     <Icon
@@ -969,7 +969,7 @@ export default function Home({ publications }) {
                 imgHeight={"666"}
                 imgSrc={"/projects/gsbAndroid.PNG"}
                 liveLink={null}
-                repoLink={"https://github.com/kellerM42/GsbApp"}
+                repoLink={"https://github.com/gabrielontech/GsbApp"}
                 stack={
                   <>
                     <Icon
@@ -1084,7 +1084,7 @@ export default function Home({ publications }) {
             <div className="flex flex-col items-start md:flex-row">
               <p className="w-auto mb-4 md:mb-0">
                 &copy; {new Date().getFullYear()} - Designed and built by Gabriel
-                Kitoko
+                OnTech
               </p>
 
               <div className="flex md:hidden">
