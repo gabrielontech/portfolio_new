@@ -967,14 +967,14 @@ export default function Home({ publications }) {
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/projects/presentation.png"}
+                imgSrc={"/projects/presentation_page.png"}
                 liveLink={null}
                 repoLink={null}
                 stack={
                   <>
                     <Icon
-                      IconType={Java}
-                      title="Java"
+                      IconType={Flutter}
+                      title="Flutter"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -989,8 +989,8 @@ export default function Home({ publications }) {
                     />
 
                     <Icon
-                      IconType={Php}
-                      title="Php"
+                      IconType={Dart}
+                      title="Dart"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
