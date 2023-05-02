@@ -835,7 +835,7 @@ export default function Home({ publications }) {
               <FeaturedProjectCard
                 title={"Interactif E-book"}
                 status={"Full-stack Project"} 
-                description={`Are you tired of traditional, static E-books? Do you want to take your reading experience to the next level? Look no further than our innovative E-book app.
+                description={`Do you want to take your reading experience to the next level? Look no further than our innovative E-book app.
 With a sleek and modern design, our app offers an interactive reading experience like no other. Gone are the days of flipping through pages - our app allows for seamless scrolling, zooming, and interactive elements to truly bring the pages to life.
 And with the power of Flutter, our app is available on both IOS and Android, ensuring that no matter what device you have, you can enjoy our app.
 But its not just about the aesthetics - our app also offers practical features such as bookmarking, highlighting, and note-taking. Plus, with the ability to download and access your E-books offline, you can take your reading experience with you wherever you go.
@@ -844,9 +844,9 @@ In a world where technology continues to advance, we are proud to offer an app t
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/projects/Gsbcontext.png"}
+                imgSrc={"/projects/image_ebook.png"}
                 liveLink={null}
-                repoLink={"https://github.com/gabrielontech/GsbAppWeb"}
+                repoLink={null}
                 stack={
                   <>
                     <Icon
@@ -972,7 +972,7 @@ In a world where technology continues to advance, we are proud to offer an app t
                 imgWidth={"1366"}
                 imgHeight={"666"}
                 imgSrc={"/projects/presentation_page.png"}
-                liveLink={null}
+                liveLink={"/projects/intro-min.gif"}
                 repoLink={null}
                 stack={
                   <>
