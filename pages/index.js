@@ -835,11 +835,7 @@ export default function Home({ publications }) {
               <FeaturedProjectCard
                 title={"Interactif E-book"}
                 status={"Full-stack Project"} 
-                description={`Do you want to take your reading experience to the next level? Look no further than our innovative E-book app.
-With a sleek and modern design, our app offers an interactive reading experience like no other. Gone are the days of flipping through pages - our app allows for seamless scrolling, zooming, and interactive elements to truly bring the pages to life.
-And with the power of Flutter, our app is available on both IOS and Android, ensuring that no matter what device you have, you can enjoy our app.
-But its not just about the aesthetics - our app also offers practical features such as bookmarking, highlighting, and note-taking. Plus, with the ability to download and access your E-books offline, you can take your reading experience with you wherever you go.
-In a world where technology continues to advance, we are proud to offer an app that bridges the gap between traditional E-books and cutting-edge technology. Try our app today and discover a new way to read.`}
+                description={`Introducing our innovative E-book app built with Flutter! With a modern design and interactive features, our app takes your reading experience to the next level. Available on both IOS and Android, it offers practical features such as bookmarking and note-taking, and the ability to access your E-books offline. Discover a new way to read and try our app today!`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
