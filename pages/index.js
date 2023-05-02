@@ -833,9 +833,13 @@ export default function Home({ publications }) {
               />
               {/* Project One */}
               <FeaturedProjectCard
-                title={"Gsb Expenses Tracker"}
+                title={"Interactif E-book"}
                 status={"Full-stack Project"} 
-                description={`The laboratory Galaxy-Swiss-Bourdin wished to set up a web application of management application for its medical visitors. The application allows to authenticate two types of users (visitors/accountant), to add and record all expenses incurred, both for direct activity (travel, catering and accommodation) activities (events, conferences...), and to present a dated follow-up of the operations carried out by the accounting department.`}
+                description={`Are you tired of traditional, static E-books? Do you want to take your reading experience to the next level? Look no further than our innovative E-book app.
+With a sleek and modern design, our app offers an interactive reading experience like no other. Gone are the days of flipping through pages - our app allows for seamless scrolling, zooming, and interactive elements to truly bring the pages to life.
+And with the power of Flutter, our app is available on both IOS and Android, ensuring that no matter what device you have, you can enjoy our app.
+But its not just about the aesthetics - our app also offers practical features such as bookmarking, highlighting, and note-taking. Plus, with the ability to download and access your E-books offline, you can take your reading experience with you wherever you go.
+In a world where technology continues to advance, we are proud to offer an app that bridges the gap between traditional E-books and cutting-edge technology. Try our app today and discover a new way to read.`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
