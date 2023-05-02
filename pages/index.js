@@ -940,7 +940,8 @@ export default function Home({ publications }) {
                       textTransform={"uppercase"}
                       fixedHeight={"h-auto"}
                     />
-                          {/* Project One */}
+                }
+                              {/* Project One */}
               <FeaturedProjectCard
                 title={"Interactif E-book"}
                 status={"Full-stack Project"} 
@@ -1004,7 +1005,6 @@ export default function Home({ publications }) {
                 }
               />
                   </>
-                }
               />
             </div>
               {/* Other Projects header */}
