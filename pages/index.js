@@ -830,70 +830,7 @@ export default function Home({ publications }) {
                     />
                   </>
                 }
-              />
-              {/* Project One */}
-              <FeaturedProjectCard
-                title={"Interactif E-book"}
-                status={"Full-stack Project"} 
-                description={`Introducing our innovative E-book app built with Flutter! With a modern design and interactive features, our app takes your reading experience to the next level. Available on both IOS and Android, it offers practical features such as bookmarking and note-taking, and the ability to access your E-books offline. Discover a new way to read and try our app today!`}
-                float={`right-0`}
-                flexDirection={`flex-col lg:flex-row`}
-                imgWidth={"1366"}
-                imgHeight={"666"}
-                imgSrc={"/projects/image_ebook.png"}
-                liveLink={null}
-                repoLink={null}
-                stack={
-                  <>
-                    <Icon
-                      IconType={Html}
-                      title="HTML"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-                    <Icon
-                      IconType={Css}
-                      title="Css"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-
-                    <Icon
-                      IconType={Php}
-                      title="Php"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-                  </>
-                }
-              />
+              /> 
               {/* Project Two */}
               <FeaturedProjectCard
                 title={"Unilever App"}
@@ -1003,7 +940,69 @@ export default function Home({ publications }) {
                       textTransform={"uppercase"}
                       fixedHeight={"h-auto"}
                     />
+                          {/* Project One */}
+              <FeaturedProjectCard
+                title={"Interactif E-book"}
+                status={"Full-stack Project"} 
+                description={`Introducing our innovative E-book app built with Flutter! With a modern design and interactive features, our app takes your reading experience to the next level. Available on both IOS and Android, it offers practical features such as bookmarking and note-taking, and the ability to access your E-books offline. Discover a new way to read and try our app today!`}
+                float={`right-0`}
+                flexDirection={`flex-col lg:flex-row`}
+                imgWidth={"1366"}
+                imgHeight={"666"}
+                imgSrc={"/projects/image_ebook.png"}
+                liveLink={null}
+                repoLink={null}
+                stack={
+                  <>
+                    <Icon
+                      IconType={Html}
+                      title="HTML"
+                      columnSizing={"w-auto"}
+                      width={"w-6"}
+                      height={"h-6"}
+                      flexDirection={"flex-row"}
+                      padding={"p-0"}
+                      titleMargins={"my-0 ml-1"}
+                      titleSize={"text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-3"}
+                      textTransform={"uppercase"}
+                      fixedHeight={"h-auto"}
+                    />
+                    <Icon
+                      IconType={Css}
+                      title="Css"
+                      columnSizing={"w-auto"}
+                      width={"w-6"}
+                      height={"h-6"}
+                      flexDirection={"flex-row"}
+                      padding={"p-0"}
+                      titleMargins={"my-0 ml-1"}
+                      titleSize={"text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-3"}
+                      textTransform={"uppercase"}
+                      fixedHeight={"h-auto"}
+                    />
 
+                    <Icon
+                      IconType={Php}
+                      title="Php"
+                      columnSizing={"w-auto"}
+                      width={"w-6"}
+                      height={"h-6"}
+                      flexDirection={"flex-row"}
+                      padding={"p-0"}
+                      titleMargins={"my-0 ml-1"}
+                      titleSize={"text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-3"}
+                      textTransform={"uppercase"}
+                      fixedHeight={"h-auto"}
+                    />
+                  </>
+                }
+              />
                   </>
                 }
               />
