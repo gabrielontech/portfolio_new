@@ -961,22 +961,39 @@ export default function Home({ publications }) {
               />
          {/* Project four */}
               <FeaturedProjectCard
-                title={"Unilever App"}
+                title={"Gsb Website"}
                 status={"Full-Stack Project"}
-                description={`Unilever is a Dutch-British multinational company, specializing in the food market. Based on the following model: Unilever model.
-                I was able to create all the necessary interfaces and interactions to allow a simple, intuitive and efficient navigation on the application.`}
+                description={`The application allows to authenticate two types of users (visitors/accountant),
+              to add and record all expenses incurred, both for direct activity (travel, catering and accommodation)
+              activities (events, conferences...), and to present a dated follow-up of the operations carried out by 
+              the accounting department.`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row-reverse`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/projects/unit.png"}
+                imgSrc={"/projects/Gsbcontext.png"}
                 liveLink={null}
-                repoLink={"https://github.com/gabrielontech/Unilever_App"}
+                repoLink={"https://github.com/gabrielontech/GsbApp"}
                 stack={
                   <>
-                    <Icon
-                      IconType={Dart}
-                      title="Dart"
+         <Icon
+                      IconType={Html}
+                      title="html"
+                      columnSizing={"w-auto"}
+                      width={"w-6"}
+                      height={"h-6"}
+                      flexDirection={"flex-row"}
+                      padding={"p-0"}
+                      titleMargins={"my-0 ml-1"}
+                      titleSize={"text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-3"}
+                      textTransform={"uppercase"}
+                      fixedHeight={"h-auto"}
+                    />
+                     <Icon
+                      IconType={Css}
+                      title="Css"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -990,24 +1007,8 @@ export default function Home({ publications }) {
                       fixedHeight={"h-auto"}
                     />
                     <Icon
-                      IconType={Flutter}
-                      title="FLUTTER"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-
-                    <Icon
-                      IconType={Firebase}
-                      title="FIREBASE"
+                      IconType={Php}
+                      title="Php"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
