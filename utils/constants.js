@@ -1,5 +1,14 @@
 export const projects = [
   {
+    title: "Dining Philosopher",
+    overview:
+      "The dining philosophers problem is a famous problem in computer science used to illustrate common issues in concurrent programming. The problem was originally formulated in 1965 by Edsger Dijkstra. It helps you to understand how multi-threading works and how to prevent deadlocks.",
+    stack: ["C", "Makefile"],
+    link: null,
+    repo: "https://github.com/gabrielontech/philo",
+    isSiteLive: true,
+  },
+  {
     title: "Cub3D",
     overview:
       "Cub3D is a clone of the famous first-person shooter Wolfenstein 3D, released in 1992.",
