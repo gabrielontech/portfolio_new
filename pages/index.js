@@ -911,8 +911,8 @@ export default function Home({ publications }) {
                 stack={
                   <>
                     <Icon
-                      IconType={Html}
-                      title="HTML"
+                      IconType={Dart}
+                      title="Dart"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -926,8 +926,8 @@ export default function Home({ publications }) {
                       fixedHeight={"h-auto"}
                     />
                     <Icon
-                      IconType={Css}
-                      title="Css"
+                      IconType={Flutter}
+                      title="Flutter"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -942,8 +942,8 @@ export default function Home({ publications }) {
                     />
 
                     <Icon
-                      IconType={Php}
-                      title="Php"
+                      IconType={Firebase}
+                      title="firebase"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
