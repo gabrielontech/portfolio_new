@@ -852,13 +852,13 @@ export default function Home({ publications }) {
               <FeaturedProjectCard
                 title={"Okoto Mobile App"}
                 status={"Full-stack project"}
-                description={`In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator. The third Episode contains Sign Up and OTP screen. The fourth episode is the most exciting episode because we build our home page on this episode than on the fifth episode we work on our product page, last not least on the 6th episode we build an order screen which has some cool stuff like swipe to remove. At the end 7th episode we build a profile screen.`}
+                description={`Simple and beautiful app， It can help you keep track of your daily plans. If you happen to have the habit of writing a mission plan, then it must be perfect for you.`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
                 imgSrc={"/projects/presentation_page.png"}
-                liveLink={"/projects/intro-min.gif"}
+                liveLink={"https://user-images.githubusercontent.com/30992818/63140875-f80da200-c015-11e9-8b14-60d6725620f1.gif"}
                 repoLink={null}
                 stack={
                   <>
