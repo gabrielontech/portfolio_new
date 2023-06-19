@@ -959,6 +959,73 @@ export default function Home({ publications }) {
                     </>
                 }
               />
+               {/* Project four*/}
+              <FeaturedProjectCard
+                title={"Gsb Website"}
+                status={"Full-stack project"}
+                description={`The laboratory Galaxy-Swiss-Bourdin wished to set up a web application of management 
+              application for its medical visitors.
+              The application allows to authenticate two types of users (visitors/accountant),
+              to add and record all expenses incurred, both for direct activity (travel, catering and accommodation)
+              activities (events, conferences...), and to present a dated follow-up of the operations carried out by 
+              the accounting department.`}
+                float={`right-0`}
+                flexDirection={`flex-col lg:flex-row`}
+                imgWidth={"1366"}
+                imgHeight={"666"}
+                imgSrc={"/projects/Gsbcontext.png"}
+                liveLink={null}
+                repoLink={"https://github.com/gabrielontech/GsbAppWeb"}
+                stack={
+                  <>
+                    <Icon
+                      IconType={Html}
+                      title="html"
+                      columnSizing={"w-auto"}
+                      width={"w-6"}
+                      height={"h-6"}
+                      flexDirection={"flex-row"}
+                      padding={"p-0"}
+                      titleMargins={"my-0 ml-1"}
+                      titleSize={"text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-3"}
+                      textTransform={"uppercase"}
+                      fixedHeight={"h-auto"}
+                    />
+                     <Icon
+                      IconType={Css}
+                      title="Css"
+                      columnSizing={"w-auto"}
+                      width={"w-6"}
+                      height={"h-6"}
+                      flexDirection={"flex-row"}
+                      padding={"p-0"}
+                      titleMargins={"my-0 ml-1"}
+                      titleSize={"text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-3"}
+                      textTransform={"uppercase"}
+                      fixedHeight={"h-auto"}
+                    />
+                    <Icon
+                      IconType={PHP}
+                      title="Php"
+                      columnSizing={"w-auto"}
+                      width={"w-6"}
+                      height={"h-6"}
+                      flexDirection={"flex-row"}
+                      padding={"p-0"}
+                      titleMargins={"my-0 ml-1"}
+                      titleSize={"text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-3"}
+                      textTransform={"uppercase"}
+                      fixedHeight={"h-auto"}
+                    />
+                    </>
+                }
+              />
             </div>
               {/* Other Projects header */}
             <h2 className="text-4xl text-center">Other Projects</h2>
