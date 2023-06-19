@@ -900,7 +900,7 @@ export default function Home({ publications }) {
               <FeaturedProjectCard
                 title={"Interactif E-book"}
                 status={"Full-stack Project"} 
-                description={`E-book app built with Flutter! With a modern design and interactive features,it takes your reading experience to the next level. Will be vailable on both IOS and Android, it offers practical features such as bookmarking and note-taking, and the ability to access your E-books offline. The app is in progress`}
+                description={`E-book app built with Flutter! With a modern design and interactive features,it takes your reading experience to the next level. Will be vailable on both IOS and Android, it offers practical features such as bookmarking and note-taking, and the ability to access your E-books offline. The app is in progress.`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
