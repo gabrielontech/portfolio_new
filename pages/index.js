@@ -784,54 +784,7 @@ export default function Home({ publications }) {
 
             {/* Featured Projects Container */}
             <div className="flex flex-col w-full mb-12">
-                {/* Project One */}
-                <FeaturedProjectCard
-                title={"Fitnezzy"}
-                status={"Front-end Project"} 
-                description={`Fitnezzy is a platform for booking à la carte sports sessions without subscription or commitment, anywhere in France in our partner gyms.`}
-                float={`right-0`}
-                flexDirection={`flex-col lg:flex-row-reverse`}
-                imgWidth={"1366"}
-                imgHeight={"666"}
-                imgSrc={"/projects/fitnezzy.jpg"}
-                liveLink={"https://apps.apple.com/fr/app/fitnezzy/id1518546961"}
-                repoLink={null}
-                stack={
-                  <>
-                      <Icon
-                      IconType={Dart}
-                      title="Dart"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-                    <Icon
-                      IconType={Flutter}
-                      title="FLUTTER"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-                  </>
-                }
-              /> 
-              {/* Project Two */}
+              {/* Project One */}
               <FeaturedProjectCard
                 title={"Unilever App"}
                 status={"Front-end project"}
@@ -895,7 +848,7 @@ export default function Home({ publications }) {
                   </>
                 }
               />
-              {/* Project Three */}
+              {/* Project Two */}
               <FeaturedProjectCard
                 title={"Okoto Mobile App"}
                 status={"Full-stack project"}
@@ -943,11 +896,11 @@ export default function Home({ publications }) {
                     </>
                 }
               />
-                              {/* Project One */}
+                              {/* Project three */}
               <FeaturedProjectCard
                 title={"Interactif E-book"}
                 status={"Full-stack Project"} 
-                description={`Introducing our innovative E-book app built with Flutter! With a modern design and interactive features, our app takes your reading experience to the next level. Available on both IOS and Android, it offers practical features such as bookmarking and note-taking, and the ability to access your E-books offline. Discover a new way to read and try our app today!`}
+                description={`E-book app built with Flutter! With a modern design and interactive features,it takes your reading experience to the next level. Will be vailable on both IOS and Android, it offers practical features such as bookmarking and note-taking, and the ability to access your E-books offline. The app is in progress`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
