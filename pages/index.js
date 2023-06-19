@@ -973,7 +973,7 @@ export default function Home({ publications }) {
                 imgHeight={"666"}
                 imgSrc={"/projects/Gsbcontext.png"}
                 liveLink={null}
-                repoLink={"https://github.com/gabrielontech/GsbApp"}
+                repoLink={"https://github.com/gabrielontech/GsbAppWeb"}
                 stack={
                   <>
          <Icon
