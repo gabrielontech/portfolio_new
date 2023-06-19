@@ -955,9 +955,12 @@ export default function Home({ publications }) {
                       marginRight={"mr-3"}
                       textTransform={"uppercase"}
                       fixedHeight={"h-auto"}
-                    />
-                  </>
-                                {/* Project Two */}
+                  />
+                    </>
+                }
+              />
+                  
+                                {/* Project four*/}
               <FeaturedProjectCard
                 title={"Gsb Website"}
                 status={"Full-stack project"}
@@ -993,7 +996,7 @@ export default function Home({ publications }) {
                     />
 
                     <Icon
-                      IconType={Dart}
+                      IconType={PHP}
                       title="Dart"
                       columnSizing={"w-auto"}
                       width={"w-6"}
@@ -1008,8 +1011,6 @@ export default function Home({ publications }) {
                       fixedHeight={"h-auto"}
                     />
                     </>
-                }
-              />
                 }
               />
             </div>
