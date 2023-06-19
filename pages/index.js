@@ -961,7 +961,7 @@ export default function Home({ publications }) {
               />
          {/* Project four */}
               <FeaturedProjectCard
-                title={"Gsb Website"}
+                title={"Gsb Website Track Expenses"}
                 status={"Full-Stack Project"}
                 description={`The application allows to authenticate two types of users (visitors/accountant),
               to add and record all expenses incurred, both for direct activity (travel, catering and accommodation)
