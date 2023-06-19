@@ -971,7 +971,7 @@ export default function Home({ publications }) {
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/projects/todo_lis.PNG"}
+                imgSrc={"/projects/Gsbcontext.png"}
                 liveLink={null}
                 repoLink={"https://github.com/gabrielontech/GsbAppWeb"}
                 stack={
