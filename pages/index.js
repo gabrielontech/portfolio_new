@@ -878,27 +878,12 @@ export default function Home({ publications }) {
                 repoLink={"https://github.com/gabrielontech/ft_irc"}
                 stack={
                   <>
-                      <Icon
-                      IconType={Dart}
-                      title="Dart"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
                     <Icon
                       IconType={Cpp}
                       title="Cpp"
                       columnSizing={"w-auto"}
-                      width={"w-2"}
-                      height={"h-2"}
+                      width={"w-6"}
+                      height={"h-6"}
                       flexDirection={"flex-row"}
                       padding={"p-0"}
                       titleMargins={"my-0 ml-1"}
