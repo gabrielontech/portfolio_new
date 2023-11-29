@@ -882,8 +882,8 @@ export default function Home({ publications }) {
                       IconType={Cpp}
                       title="Cpp"
                       columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
+                      width={"w-2"}
+                      height={"h-2"}
                       flexDirection={"flex-row"}
                       padding={"p-0"}
                       titleMargins={"my-0 ml-1"}
