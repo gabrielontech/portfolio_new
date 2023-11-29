@@ -17,6 +17,7 @@ import NodeJs from "../components/icons/NodeJs";
 import Firebase from "../components/icons/Firebase";
 import Figma from "../components/icons/Figma";
 import Php from "../components/icons/Php.js";
+import Cpp from "../components/icons/cpp.js";
 import Dart from "../components/icons/Dart";
 import AfterEffects from "../components/icons/AfterEffects";
 import AdobeXd from "../components/icons/AdobeXd";
@@ -661,7 +662,22 @@ export default function Home({ publications }) {
               textTransform={"normal-case"}
               fixedHeight={"h-28"}
             />
-              {/* JAVA */}
+              {/* CPP */}
+              <Icon
+                IconType={Cpp}
+                title="Cpp"
+                width={"w-16"}
+                height={"h-16"}
+                padding={"p-0"}
+                flexDirection={"flex-col"}
+                titleMargins={"mt-4"}
+                titleSize={"text-sm sm:text-sm"}
+                marginBottom={"mb-4"}
+                marginRight={"mr-0"}
+                textTransform={"normal-case"}
+                fixedHeight={"h-28"}
+              />
+              {/* PHP */}
               <Icon
                 IconType={Php}
                 title="Php"
@@ -858,28 +874,13 @@ export default function Home({ publications }) {
                 imgWidth={"1366"}
                 imgHeight={"666"}
                  imgSrc={"/projects/irc.PNG"}
+                liveLink={null}
                 repoLink={"https://github.com/gabrielontech/ft_irc"}
                 stack={
                   <>
                     <Icon
-                      IconType={Flutter}
-                      title="Flutter"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-
-                    <Icon
-                      IconType={Dart}
-                      title="Dart"
+                      IconType={Cpp}
+                      title="Cpp"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
