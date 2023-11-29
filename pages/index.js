@@ -556,10 +556,10 @@ export default function Home({ publications }) {
                   />
                 </h2>
                 <p className="w-4/5 text-xl md:w-full">
-                  I build mobile apps that look good, and work well with Flutter Framework.
+                   I build mobile apps, websites, servers, databases, and I want to create even more, so let's be inspired.
                 </p>
                 <p className="w-4/5 text-xl md:w-full">
-                  Let's dive in, shall we?
+                  Let's dive in !
                 </p>
                 <button
                   className="mt-4 btn-brand btn-lg group"
