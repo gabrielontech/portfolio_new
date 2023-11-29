@@ -857,7 +857,7 @@ export default function Home({ publications }) {
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/projects/todo_lis.PNG"}
+                imgSrc={"https://www.researchgate.net/profile/Jan-Goebel/publication/238686593/figure/fig3/AS:669499284008973@1536632476669/Setup-of-an-IRC-network.ppm"}
                 liveLink={"https://user-images.githubusercontent.com/30992818/63140875-f80da200-c015-11e9-8b14-60d6725620f1.gif"}
                 repoLink={null}
                 stack={
