@@ -850,16 +850,15 @@ export default function Home({ publications }) {
               />
               {/* Project Two */}
               <FeaturedProjectCard
-                title={"Day List APP"}
-                status={"Full-stack project"}
-                description={`Simple and beautiful app，It can help you keep track of your daily plans. If you happen to have the habit of writing a mission plan, then it must be perfect for you.`}
+                title={"Internet Relay Chat"}
+                status={"Back-end project"}
+                description={`Implementation of an Internet Relay Chat (IRC) server, providing a platform for users to connect, communicate, and exchange messages with each other in real-time over the internet.`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"https://www.researchgate.net/profile/Jan-Goebel/publication/238686593/figure/fig3/AS:669499284008973@1536632476669/Setup-of-an-IRC-network.ppm"}
-                liveLink={"https://user-images.githubusercontent.com/30992818/63140875-f80da200-c015-11e9-8b14-60d6725620f1.gif"}
-                repoLink={null}
+                 imgSrc={"/projects/irc.PNG"}
+                repoLink={"https://github.com/gabrielontech/ft_irc"}
                 stack={
                   <>
                     <Icon
@@ -893,69 +892,6 @@ export default function Home({ publications }) {
                       textTransform={"uppercase"}
                       fixedHeight={"h-auto"}
                     />
-                    </>
-                }
-              />
-                              {/* Project three */}
-              <FeaturedProjectCard
-                title={"Interactif E-book"}
-                status={"Full-stack Project"} 
-                description={`E-book app built with Flutter! With a modern design and interactive features,it takes your reading experience to the next level. Will be vailable on both IOS and Android, it offers practical features such as bookmarking and note-taking, and the ability to access your E-books offline. The app is in progress.`}
-                float={`right-0`}
-                flexDirection={`flex-col lg:flex-row`}
-                imgWidth={"1366"}
-                imgHeight={"666"}
-                imgSrc={"/projects/image_ebook.png"}
-                liveLink={null}
-                repoLink={null}
-                stack={
-                  <>
-                    <Icon
-                      IconType={Dart}
-                      title="Dart"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-                    <Icon
-                      IconType={Flutter}
-                      title="Flutter"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-
-                    <Icon
-                      IconType={Firebase}
-                      title="firebase"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                  />
                     </>
                 }
               />
