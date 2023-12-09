@@ -220,10 +220,10 @@ export default function Home({ publications }) {
       >
         <Head>
           <script type="module" src="index.js"></script>
-          <title>Gabriel OnTech | Frontend Developer</title>
+          <title>Gabriel OnTech | Software Developer</title>
           <meta
             name="description"
-            content="The portfolio of frontend developer, Gabriel OnTech"
+            content="The portfolio of Software developer, Gabriel OnTech"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -550,7 +550,7 @@ export default function Home({ publications }) {
                     eraseSpeed={30}
                     eraseDelay={1500}
                     text={[
-                      `Mobile App Developer`,
+                      `Software Developer`,
                       `Fragances Lover`,
                     ]}
                   />
