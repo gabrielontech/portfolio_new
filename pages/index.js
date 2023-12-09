@@ -551,7 +551,7 @@ export default function Home({ publications }) {
                     eraseDelay={1500}
                     text={[
                       `Software Developer`,
-                      `Fragances Lover`,
+                      `Fragance Lover`,
                     ]}
                   />
                 </h2>
