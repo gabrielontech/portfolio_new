@@ -589,7 +589,7 @@ export default function Home({ publications }) {
                   -- Dynamic, passionate and curious --
                   </p>
                   <p className="text-lg">
-                  Student developer in Paris at {" "}
+                  FullStack Developer and ex Student at 42Paris {" "}
                   <a
                       href="https://42.fr/en/homepage/"
                       target="_blank"
@@ -602,14 +602,19 @@ export default function Home({ publications }) {
                   </p>
                   <p className="text-lg">
                   With a range of several personal projects, added to my study projects in computer development,
-                  I am now focused on cross-platform mobile application development via Flutter.
+                  I spent 2 years grinding on app development with Flutter Framework.
                   </p>
                   <p className="text-lg">
                   A Google technology allowing me to realize a fast and quality development on Android and iOS (and Web).
                   </p>
                   <p className="text-lg">
-                  During my studies, I realized several projects in computer science: mobile android applications (JAVA), website (PHP,SQL, HTML/CSS), 
-                  desktop applications (Windows, Mac)... 
+                  I am now focused on web development as a fullstack developer with NextJS a React Framework made by Vercel's team.
+                  </p>
+                  <p className="text-lg">
+                  With many accomplished projects under my belt and many technologies in use, I've come to realize that what I'm most passionate about is seeing beautiful things come to life, especially those that are useful to us all. 
+                  </p>
+                  <p className="text-lg">
+                  No matter what technology is used to bring them to life, the most important thing is that they meet a real need in the right way.
                   </p>
                   <p className="text-lg">
                   Curious by nature, I want to invest myself in high impact projects that allow me to cultivate my creativity.
