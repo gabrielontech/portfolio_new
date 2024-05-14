@@ -6,6 +6,8 @@ import ReactTypingEffect from "react-typing-effect";
 
 import Icon from "../components/Icon";
 // Icons
+import NextJs from "../components/icons/Nextjs.js";
+// import ReactJS from "../components/icons/React.js";
 import Flutter from "../components/icons/Flutter.js";
 import Html from "../components/icons/Html";
 import Css from "../components/icons/Css";
@@ -38,6 +40,7 @@ import BlogItem from "../components/blog/BlogItem";
 import { useTheme } from "next-themes";
 
 import { projects } from "../utils/constants";
+import Aws from "../components/icons/Aws.js";
 
 const getDimensions = (ele) => {
   const { height } = ele.getBoundingClientRect();
@@ -652,6 +655,66 @@ export default function Home({ publications }) {
 
             {/* Skills icons */}
             <div className="w-full mr-auto grid gap-4 grid-cols-4 sm:grid-cols-4 md:grid-cols-8 mt-4">
+                {/* Javascript */}
+                <Icon
+                IconType={Javascript}
+                title="Javascript"
+                width={"w-16"}
+                height={"h-16"}
+                padding={"p-0"}
+                flexDirection={"flex-col"}
+                titleMargins={"mt-4"}
+                titleSize={"text-sm sm:text-sm"}
+                marginBottom={"mb-4"}
+                marginRight={"mr-0"}
+                textTransform={"normal-case"}
+                fixedHeight={"h-28"}
+              />
+              {/* NextJS */}
+              <Icon
+              IconType={NextJs}
+              title="NextJS"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            />
+            {/* React
+            <Icon
+              IconType={React}
+              title="ReactJS"
+              width={"w-16"}
+              height={"h-16"}
+              padding={"p-0"}
+              flexDirection={"flex-col"}
+              titleMargins={"mt-4"}
+              titleSize={"text-sm sm:text-sm"}
+              marginBottom={"mb-4"}
+              marginRight={"mr-0"}
+              textTransform={"normal-case"}
+              fixedHeight={"h-28"}
+            /> */}
+              {/* AWS
+              <Icon
+                IconType={Aws}
+                title="Aws"
+                width={"w-16"}
+                height={"h-16"}
+                padding={"p-0"}
+                flexDirection={"flex-col"}
+                titleMargins={"mt-4"}
+                titleSize={"text-sm sm:text-sm"}
+                marginBottom={"mb-4"}
+                marginRight={"mr-0"}
+                textTransform={"normal-case"}
+                fixedHeight={"h-28"}
+              /> */}
               {/* Dart */}
               <Icon
               IconType={Dart}
@@ -759,22 +822,6 @@ export default function Home({ publications }) {
                 fixedHeight={"h-28"}
               />
 
-              {/* Javascript */}
-              <Icon
-                IconType={Javascript}
-                title="Javascript"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
-
               {/* Firebase */}
               <Icon
                 IconType={Firebase}
@@ -807,22 +854,21 @@ export default function Home({ publications }) {
             <div className="flex flex-col w-full mb-12">
               {/* Project One */}
               <FeaturedProjectCard
-                title={"Unilever App"}
-                status={"Front-end project"}
-                description={`Unilever is a Dutch-British multinational company, specializing in the food market. Based on the following model: Unilever model.
-                I was able to create all the necessary interfaces and interactions to allow a simple, intuitive and efficient navigation on the application.`}
+                title={"JiffyPrep Interviews"}
+                status={"Full Stack project"}
+                description={`JiffyPrep interviews is a web platform that uses the power of AI to help candidates prepare for job interviews. The platform provides a PDF containing the resources needed to prepare for a job interview.`}
                 float={`right-0`}
                 flexDirection={`flex-col lg:flex-row-reverse`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                imgSrc={"/projects/unit.png"}
-                liveLink={null}
-                repoLink={"https://github.com/gabrielontech/Unilever_App"}
+                imgSrc={"/projects/jiffyPrep.png"}
+                liveLink={"https://jiffyprepinterviews.com/fr"}
+                repoLink={null}
                 stack={
                   <>
                     <Icon
-                      IconType={Dart}
-                      title="Dart"
+                      IconType={NextJs}
+                      title="NextJS"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -836,8 +882,8 @@ export default function Home({ publications }) {
                       fixedHeight={"h-auto"}
                     />
                     <Icon
-                      IconType={Flutter}
-                      title="FLUTTER"
+                      IconType={Supabase}
+                      title="Supabase"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -851,9 +897,9 @@ export default function Home({ publications }) {
                       fixedHeight={"h-auto"}
                     />
 
-                    <Icon
-                      IconType={Firebase}
-                      title="FIREBASE"
+                    {/* <Icon
+                      IconType={Aws}
+                      title="Aws"
                       columnSizing={"w-auto"}
                       width={"w-6"}
                       height={"h-6"}
@@ -865,7 +911,7 @@ export default function Home({ publications }) {
                       marginRight={"mr-3"}
                       textTransform={"uppercase"}
                       fixedHeight={"h-auto"}
-                    />
+                    /> */}
                   </>
                 }
               />

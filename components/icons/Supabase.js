@@ -11,4 +11,5 @@ const Supabase = () => {
   );
 };
 
+
 export default Supabase;
