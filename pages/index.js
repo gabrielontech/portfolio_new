@@ -88,9 +88,9 @@ export default function Home({ publications }) {
   useEffect(() => {
     const sectionRefs = [
       { section: "home", ref: homeRef, id: 1 },
-      { section: "about", ref: aboutRef, id: 2 },
+      { section: "my-work", ref: myWorkRef, id: 2 },
       { section: "skills", ref: skillsRef, id: 3 },
-      { section: "my-work", ref: myWorkRef, id: 4 },
+      { section: "about", ref: aboutRef, id: 4 },
       { section: "contact", ref: contactRef, id: 5 },
     ];
 
@@ -172,9 +172,7 @@ export default function Home({ publications }) {
 
   const currentTheme = theme === "system" ? systemTheme : theme;
 
-  useEffect(() => {
-    console.log(currentTheme);
-  }, [currentTheme]);
+  useEffect(() => {}, [currentTheme]);
 
   const renderThemeChanger = () => {
     if (!mounted) return null;
@@ -552,18 +550,14 @@ export default function Home({ publications }) {
                     speed={30}
                     eraseSpeed={30}
                     eraseDelay={1500}
-                    text={[
-                      `Software Developer`,
-                      `Fragance Lover`,
-                    ]}
+                    text={[`Software Developer`, `Fragance Lover`]}
                   />
                 </h2>
                 <p className="w-4/5 text-xl md:w-full">
-                   I build mobile apps, websites, servers, databases, and I want to create even more, so let's be inspired.
+                  I build mobile apps, websites, servers, databases, and I want
+                  to create even more, so let's be inspired.
                 </p>
-                <p className="w-4/5 text-xl md:w-full">
-                  Let's dive in !
-                </p>
+                <p className="w-4/5 text-xl md:w-full">Let's dive in !</p>
                 <button
                   className="mt-4 btn-brand btn-lg group"
                   onClick={() => {
@@ -575,271 +569,6 @@ export default function Home({ publications }) {
               </div>
             </div>
           </main>
-
-          {/* About */}
-          <section
-            className="flex flex-col w-full px-0 md:px-20 lg:px-24 py-28 section"
-            id="about"
-            ref={aboutRef}
-          >
-            <div className="flex flex-col">
-              <h2 className="text-5xl">About</h2>
-              <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 border-0"></hr>
-
-              <div className="flex flex-col-reverse items-start w-full md:flex-row">
-                <div className="flex flex-col w-full md:pr-8 md:w-3/5">
-                <p className="text-lg">
-                  -- Dynamic, passionate and curious --
-                  </p>
-                  <p className="text-lg">
-                  FullStack Developer and ex Student at 42Paris {" "}
-                  <a
-                      href="https://42.fr/en/homepage/"
-                      target="_blank"
-                      className="underline-link"
-                      rel="noreferrer"
-                    >
-                      42School
-                    </a>
-                  , I have always been passionate about new technologies.
-                  </p>
-                  <p className="text-lg">
-                  With a range of several personal projects, added to my study projects in computer development,
-                  I spent 2 years grinding on app development with Flutter Framework.
-                  </p>
-                  <p className="text-lg">
-                  A Google technology allowing me to realize a fast and quality development on Android and iOS (and Web).
-                  </p>
-                  <p className="text-lg">
-                  I am now focused on web development as a fullstack developer with NextJS a React Framework made by Vercel's team.
-                  </p>
-                  <p className="text-lg">
-                  With many accomplished projects under my belt and many technologies in use, I've come to realize that what I'm most passionate about is seeing beautiful things come to life, especially those that are useful to us all. 
-                  </p>
-                  <p className="text-lg">
-                  No matter what technology is used to bring them to life, the most important thing is that they meet a real need in the right way.
-                  </p>
-                  <p className="text-lg">
-                  Curious by nature, I want to invest myself in high impact projects that allow me to cultivate my creativity.
-                  </p>
-                  <p className="text-lg">
-                  Conscientious in my work, 
-                  I work in a thoughtful and autonomous way in order to provide a quality work as close as possible to your expectations.
-                  </p>
-                  <p className="text-lg">
-                    Take a look at my work below to see what I&apos;m working
-                    on, and get in touch if you&apos;d like to work together!
-                  </p>
-                </div>
-                <div className="flex w-full h-full mb-4 md:pl-8 md:w-2/5 md:mb-0">
-                  <Image
-                    src="/headshot-with-frame-2.jpg"
-                    className="overflow-hidden rounded-md"
-                    width={880}
-                    height={880}
-                    alt={"Gabriel OnTech headshot"}
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Skills */}
-          <section
-            className="flex flex-col w-full px-0 md:px-20 lg:px-24 py-28 section"
-            id="skills"
-            ref={skillsRef}
-          >
-            <h2 className="text-5xl">Skills</h2>
-            <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 border-0"></hr>
-
-            {/* Skills icons */}
-            <div className="w-full mr-auto grid gap-4 grid-cols-4 sm:grid-cols-4 md:grid-cols-8 mt-4">
-                {/* Javascript */}
-                <Icon
-                IconType={Javascript}
-                title="Javascript"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
-              {/* NextJS */}
-              <Icon
-              IconType={NextJs}
-              title="NextJS"
-              width={"w-16"}
-              height={"h-16"}
-              padding={"p-0"}
-              flexDirection={"flex-col"}
-              titleMargins={"mt-4"}
-              titleSize={"text-sm sm:text-sm"}
-              marginBottom={"mb-4"}
-              marginRight={"mr-0"}
-              textTransform={"normal-case"}
-              fixedHeight={"h-28"}
-            />
-            {/* React
-            <Icon
-              IconType={React}
-              title="ReactJS"
-              width={"w-16"}
-              height={"h-16"}
-              padding={"p-0"}
-              flexDirection={"flex-col"}
-              titleMargins={"mt-4"}
-              titleSize={"text-sm sm:text-sm"}
-              marginBottom={"mb-4"}
-              marginRight={"mr-0"}
-              textTransform={"normal-case"}
-              fixedHeight={"h-28"}
-            /> */}
-              {/* AWS
-              <Icon
-                IconType={Aws}
-                title="Aws"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              /> */}
-              {/* Dart */}
-              <Icon
-              IconType={Dart}
-              title="DART"
-              width={"w-16"}
-              height={"h-16"}
-              padding={"p-0"}
-              flexDirection={"flex-col"}
-              titleMargins={"mt-4"}
-              titleSize={"text-sm sm:text-sm"}
-              marginBottom={"mb-4"}
-              marginRight={"mr-0"}
-              textTransform={"normal-case"}
-              fixedHeight={"h-28"}
-            />
-              {/* CPP */}
-              <Icon
-                IconType={Cpp}
-                title="Cpp"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
-              {/* PHP */}
-              <Icon
-                IconType={Php}
-                title="Php"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
-                {/* JAVA */}
-                <Icon
-                IconType={Java}
-                title="Java"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
-             {/* Flutter */}
-             <Icon
-              IconType={Flutter}
-              title="FLUTTER"
-              width={"w-16"}
-              height={"h-16"}
-              padding={"p-0"}
-              flexDirection={"flex-col"}
-              titleMargins={"mt-4"}
-              titleSize={"text-sm sm:text-sm"}
-              marginBottom={"mb-4"}
-              marginRight={"mr-0"}
-              textTransform={"normal-case"}
-              fixedHeight={"h-28"}
-            />
-              {/* HTML */}
-              <Icon
-                IconType={Html}
-                title="HTML"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
-
-              {/* CSS */}
-              <Icon
-                IconType={Css}
-                title="CSS"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
-
-              {/* Firebase */}
-              <Icon
-                IconType={Firebase}
-                title="Firebase"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
-            </div>
-          </section>
-
           {/* My Work */}
           <section
             className="flex flex-col w-full px-0 md:px-20 lg:px-24 py-28 section"
@@ -851,7 +580,7 @@ export default function Home({ publications }) {
             <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 border-0"></hr>
 
             {/* Featured Projects Container */}
-            <div className="flex flex-col w-full mb-12">
+            <div className="flex flex-col w-full mb-8">
               {/* Project One */}
               <FeaturedProjectCard
                 title={"JiffyPrep Interviews"}
@@ -924,7 +653,7 @@ export default function Home({ publications }) {
                 flexDirection={`flex-col lg:flex-row`}
                 imgWidth={"1366"}
                 imgHeight={"666"}
-                 imgSrc={"/projects/irc.PNG"}
+                imgSrc={"/projects/irc.PNG"}
                 liveLink={null}
                 repoLink={"https://github.com/gabrielontech/ft_irc"}
                 stack={
@@ -944,10 +673,10 @@ export default function Home({ publications }) {
                       textTransform={"uppercase"}
                       fixedHeight={"h-auto"}
                     />
-                    </>
+                  </>
                 }
               />
-         {/* Project four */}
+              {/* Project four */}
               <FeaturedProjectCard
                 title={"Gsb Website Track Expenses"}
                 status={"Full-Stack Project"}
@@ -964,7 +693,7 @@ export default function Home({ publications }) {
                 repoLink={"https://github.com/gabrielontech/GsbAppWeb"}
                 stack={
                   <>
-         <Icon
+                    <Icon
                       IconType={Html}
                       title="html"
                       columnSizing={"w-auto"}
@@ -979,7 +708,7 @@ export default function Home({ publications }) {
                       textTransform={"uppercase"}
                       fixedHeight={"h-auto"}
                     />
-                     <Icon
+                    <Icon
                       IconType={Css}
                       title="Css"
                       columnSizing={"w-auto"}
@@ -1013,20 +742,261 @@ export default function Home({ publications }) {
                 }
               />
             </div>
-              {/* Other Projects header */}
+            {/* Other Projects header */}
             <h2 className="text-4xl text-center">Other Projects</h2>
             <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 mx-auto border-0"></hr>
-            <p className="mb-16 text-lg text-center">
+            <p className="mb-10 text-lg text-center">
               Check out some of the projects I&apos;ve been a part of...
             </p>
 
             {/* Other Projects Container */}
-            <div className="grid grid-flow-row grid-rows-2 gap-4 grid-col-1 lg:grid-cols-3">
+            <div className="grid  grid-rows-1 gap-4 grid-col-1 lg:grid-cols-3">
               {projects.map(function (project, i) {
                 return <ProjectCard project={project} key={i} />;
               })}
             </div>
           </section>
+          {/* Skills */}
+          <section
+            className="flex flex-col w-full px-0 md:px-20 lg:px-24 py-28 section"
+            id="skills"
+            ref={skillsRef}
+          >
+            <h2 className="text-5xl">Skills</h2>
+            <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 border-0"></hr>
+
+            {/* Skills icons */}
+            <div className="w-full mr-auto grid gap-4 grid-cols-4 sm:grid-cols-4 md:grid-cols-8 mt-4">
+              {/* Javascript */}
+              <Icon
+                IconType={Javascript}
+                title="Javascript"
+                width={"w-16"}
+                height={"h-16"}
+                padding={"p-0"}
+                flexDirection={"flex-col"}
+                titleMargins={"mt-4"}
+                titleSize={"text-sm sm:text-sm"}
+                marginBottom={"mb-4"}
+                marginRight={"mr-0"}
+                textTransform={"normal-case"}
+                fixedHeight={"h-28"}
+              />
+              {/* NextJS */}
+              <Icon
+                IconType={NextJs}
+                title="NextJS"
+                width={"w-16"}
+                height={"h-16"}
+                padding={"p-0"}
+                flexDirection={"flex-col"}
+                titleMargins={"mt-4"}
+                titleSize={"text-sm sm:text-sm"}
+                marginBottom={"mb-4"}
+                marginRight={"mr-0"}
+                textTransform={"normal-case"}
+                fixedHeight={"h-28"}
+              />
+
+              <Icon
+                IconType={Dart}
+                title="DART"
+                width={"w-16"}
+                height={"h-16"}
+                padding={"p-0"}
+                flexDirection={"flex-col"}
+                titleMargins={"mt-4"}
+                titleSize={"text-sm sm:text-sm"}
+                marginBottom={"mb-4"}
+                marginRight={"mr-0"}
+                textTransform={"normal-case"}
+                fixedHeight={"h-28"}
+              />
+              {/* CPP */}
+              <Icon
+                IconType={Cpp}
+                title="Cpp"
+                width={"w-16"}
+                height={"h-16"}
+                padding={"p-0"}
+                flexDirection={"flex-col"}
+                titleMargins={"mt-4"}
+                titleSize={"text-sm sm:text-sm"}
+                marginBottom={"mb-4"}
+                marginRight={"mr-0"}
+                textTransform={"normal-case"}
+                fixedHeight={"h-28"}
+              />
+              {/* PHP */}
+              <Icon
+                IconType={Php}
+                title="Php"
+                width={"w-16"}
+                height={"h-16"}
+                padding={"p-0"}
+                flexDirection={"flex-col"}
+                titleMargins={"mt-4"}
+                titleSize={"text-sm sm:text-sm"}
+                marginBottom={"mb-4"}
+                marginRight={"mr-0"}
+                textTransform={"normal-case"}
+                fixedHeight={"h-28"}
+              />
+              {/* JAVA */}
+              <Icon
+                IconType={Java}
+                title="Java"
+                width={"w-16"}
+                height={"h-16"}
+                padding={"p-0"}
+                flexDirection={"flex-col"}
+                titleMargins={"mt-4"}
+                titleSize={"text-sm sm:text-sm"}
+                marginBottom={"mb-4"}
+                marginRight={"mr-0"}
+                textTransform={"normal-case"}
+                fixedHeight={"h-28"}
+              />
+              {/* Flutter */}
+              <Icon
+                IconType={Flutter}
+                title="FLUTTER"
+                width={"w-16"}
+                height={"h-16"}
+                padding={"p-0"}
+                flexDirection={"flex-col"}
+                titleMargins={"mt-4"}
+                titleSize={"text-sm sm:text-sm"}
+                marginBottom={"mb-4"}
+                marginRight={"mr-0"}
+                textTransform={"normal-case"}
+                fixedHeight={"h-28"}
+              />
+              {/* HTML */}
+              <Icon
+                IconType={Html}
+                title="HTML"
+                width={"w-16"}
+                height={"h-16"}
+                padding={"p-0"}
+                flexDirection={"flex-col"}
+                titleMargins={"mt-4"}
+                titleSize={"text-sm sm:text-sm"}
+                marginBottom={"mb-4"}
+                marginRight={"mr-0"}
+                textTransform={"normal-case"}
+                fixedHeight={"h-28"}
+              />
+
+              {/* CSS */}
+              <Icon
+                IconType={Css}
+                title="CSS"
+                width={"w-16"}
+                height={"h-16"}
+                padding={"p-0"}
+                flexDirection={"flex-col"}
+                titleMargins={"mt-4"}
+                titleSize={"text-sm sm:text-sm"}
+                marginBottom={"mb-4"}
+                marginRight={"mr-0"}
+                textTransform={"normal-case"}
+                fixedHeight={"h-28"}
+              />
+
+              {/* Firebase */}
+              <Icon
+                IconType={Firebase}
+                title="Firebase"
+                width={"w-16"}
+                height={"h-16"}
+                padding={"p-0"}
+                flexDirection={"flex-col"}
+                titleMargins={"mt-4"}
+                titleSize={"text-sm sm:text-sm"}
+                marginBottom={"mb-4"}
+                marginRight={"mr-0"}
+                textTransform={"normal-case"}
+                fixedHeight={"h-28"}
+              />
+            </div>
+          </section>
+
+          {/* About */}
+          <section
+            className="flex flex-col w-full px-0 md:px-20 lg:px-24 py-28 section"
+            id="about"
+            ref={aboutRef}
+          >
+            <div className="flex flex-col">
+              <h2 className="text-5xl">About</h2>
+              <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 border-0"></hr>
+
+              <div className="flex flex-col-reverse items-start w-full md:flex-row">
+                <div className="flex flex-col w-full md:pr-8 md:w-3/5">
+                  <p className="text-lg">
+                    -- Dynamic, passionate and curious --
+                  </p>
+
+                  <p className="text-lg">
+                    With a range of several professional and personal projects,
+                    I spent 3 years grinding on app development with Flutter
+                    Framework.
+                  </p>
+                  <p className="text-lg">
+                    A Google technology allowing me to realize a fast and
+                    quality development on Android and iOS (and Web).
+                  </p>
+                  <p className="text-lg">
+                    I am now more than ever a complete developer since I added
+                    up NextJs, React and Supabase to my main stack. I work as a
+                    Fullstack developer for{" "}
+                    <a
+                      href="https://www.agweb-communication.com/"
+                      target="_blank"
+                    >
+                      AGWEB-Communication
+                    </a>{" "}
+                    wich is a web/mobile agency based in Paris (France).
+                  </p>
+                  <p className="text-lg">
+                    With many accomplished projects under my belt and many
+                    technologies in use, I've come to realize that what I'm most
+                    passionate about is seeing beautiful things come to life,
+                    especially those that are useful to us all.
+                  </p>
+                  <p className="text-lg">
+                    No matter what technology is used to bring them to life, the
+                    most important thing is that they meet a real need in the
+                    right way.
+                  </p>
+                  <p className="text-lg">
+                    I want to invest myself in high impact projects that allow
+                    me to cultivate my creativity.
+                  </p>
+                  <p className="text-lg">
+                    Conscientious in my work, I work in a thoughtful and
+                    autonomous way in order to provide a quality work as close
+                    as possible to your expectations.
+                  </p>
+                  <p className="text-lg">
+                    Take a look at my work below to see what I&apos;m working
+                    on, and get in touch if you&apos;d like to work together!
+                  </p>
+                </div>
+                <div className="flex w-full h-full mb-4 md:pl-8 md:w-2/5 md:mb-0">
+                  <Image
+                    src="/gabriel_chill.jpg"
+                    className="overflow-hidden rounded-md"
+                    width={880}
+                    height={880}
+                    alt={"Gabriel OnTech headshot"}
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Contact */}
           <section
             className="flex flex-col w-full px-0 md:px-20 lg:px-24 py-28 section"
@@ -1088,8 +1058,8 @@ export default function Home({ publications }) {
 
             <div className="flex flex-col items-start md:flex-row">
               <p className="w-auto mb-4 md:mb-0">
-                &copy; {new Date().getFullYear()} - Designed and built by Gabriel
-                OnTech
+                &copy; {new Date().getFullYear()} - Designed and built by
+                Gabriel OnTech
               </p>
 
               <div className="flex md:hidden">
@@ -1159,17 +1129,18 @@ export default function Home({ publications }) {
                   />
                 </svg>
               </button>
-              {/* About - Diamond 2 */}
+
+              {/* My Work - Diamond 2 */}
               <button
                 className="w-5 h-5 mb-4"
                 onClick={() => {
-                  scrollTo(aboutRef.current);
+                  scrollTo(myWorkRef.current);
                 }}
               >
                 <svg
                   id="e5c888e5-3206-4553-8f53-60ee93248ad9"
-                  className={`group rounded-sm transform  transition duration-500 ease-in-out hover:rotate-45 hover:scale-110 ${
-                    visibleSection === "about"
+                  className={`group rounded-sm transform transition duration-500 ease-in-out hover:rotate-45 hover:scale-110 ${
+                    visibleSection === "my-work"
                       ? "rotate-45 scale-110"
                       : "rotate-0 scale-100"
                   }`}
@@ -1181,7 +1152,7 @@ export default function Home({ publications }) {
                   {/* Fill */}
                   <path
                     className={`fill-current origin-center transform transition duration-200 ease-in-out group-hover:text-dark dark:group-hover:text-white group-hover:rotate-90 ${
-                      visibleSection === "about"
+                      visibleSection === "my-work"
                         ? "dark:text-white text-mid rotate-90"
                         : "dark:text-dark text-light rotate-0"
                     }`}
@@ -1190,7 +1161,7 @@ export default function Home({ publications }) {
                   {/* Border */}
                   <path
                     className={`fill-current origin-center transform transition duration-500 ease-in-out dark:group-hover:text-white group-hover:text-dark group-hover:rotate-45 group-hover:opacity-100 ${
-                      visibleSection === "about"
+                      visibleSection === "my-work"
                         ? "dark:text-white text-dark rotate-45 opacity-100"
                         : "dark:text-white text-light rotate-45"
                     }`}
@@ -1198,6 +1169,7 @@ export default function Home({ publications }) {
                   />
                 </svg>
               </button>
+
               {/* Skills - Diamond 3 */}
               <button
                 className="w-5 h-5 mb-4"
@@ -1237,17 +1209,17 @@ export default function Home({ publications }) {
                   />
                 </svg>
               </button>
-              {/* My Work - Diamond 4 */}
+              {/* About - Diamond 4 */}
               <button
                 className="w-5 h-5 mb-4"
                 onClick={() => {
-                  scrollTo(myWorkRef.current);
+                  scrollTo(aboutRef.current);
                 }}
               >
                 <svg
                   id="e5c888e5-3206-4553-8f53-60ee93248ad9"
-                  className={`group rounded-sm transform transition duration-500 ease-in-out hover:rotate-45 hover:scale-110 ${
-                    visibleSection === "my-work"
+                  className={`group rounded-sm transform  transition duration-500 ease-in-out hover:rotate-45 hover:scale-110 ${
+                    visibleSection === "about"
                       ? "rotate-45 scale-110"
                       : "rotate-0 scale-100"
                   }`}
@@ -1259,7 +1231,7 @@ export default function Home({ publications }) {
                   {/* Fill */}
                   <path
                     className={`fill-current origin-center transform transition duration-200 ease-in-out group-hover:text-dark dark:group-hover:text-white group-hover:rotate-90 ${
-                      visibleSection === "my-work"
+                      visibleSection === "about"
                         ? "dark:text-white text-mid rotate-90"
                         : "dark:text-dark text-light rotate-0"
                     }`}
@@ -1268,7 +1240,7 @@ export default function Home({ publications }) {
                   {/* Border */}
                   <path
                     className={`fill-current origin-center transform transition duration-500 ease-in-out dark:group-hover:text-white group-hover:text-dark group-hover:rotate-45 group-hover:opacity-100 ${
-                      visibleSection === "my-work"
+                      visibleSection === "about"
                         ? "dark:text-white text-dark rotate-45 opacity-100"
                         : "dark:text-white text-light rotate-45"
                     }`}
