@@ -58,7 +58,7 @@ export default function AnimatedCodeEditor() {
           setCurrentSnippet((prev) => (prev + 1) % codeSnippets.length);
           setDisplayedCode("");
           setIsTyping(true);
-        }, 2000);
+        }, 1800);
       }
     }, 30);
 

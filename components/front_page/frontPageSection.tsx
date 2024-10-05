@@ -305,7 +305,11 @@ export default function LandingPage({
           </div>
         </main>
         <section className="container mx-auto px-4 py-16">
-          <AnimatedCodeEditor />
+          <div className="h-[400px] overflow-hidden">
+            {" "}
+            {/* Add this wrapper */}
+            <AnimatedCodeEditor />
+          </div>
         </section>
       </div>
     </div>
