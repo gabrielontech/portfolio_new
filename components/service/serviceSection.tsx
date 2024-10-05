@@ -219,7 +219,7 @@ export default function ServiceSection() {
                         objectFit="cover"
                         className="rounded-lg"
                       />
-                      <motion.div
+                      {/* <motion.div
                         className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 mix-blend-overlay"
                         initial={{ x: "-100%" }}
                         animate={{ x: "100%" }}
@@ -228,7 +228,7 @@ export default function ServiceSection() {
                           duration: 3,
                           ease: "linear",
                         }}
-                      />
+                      /> */}
                     </motion.div>
                   </div>
                 )}
