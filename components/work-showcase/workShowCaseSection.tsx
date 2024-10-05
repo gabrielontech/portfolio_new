@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MockupToolbar from "../mockup/mockup_bar";
 import AtelierSoi from "@/public/assets/images/ateliersoi.png";
-import ZoneGrise from "@/public/assets/images/ZoneGrise.png";
+import ZoneGrise from "@/public/assets/images/zoneGrise.png";
 import xpertOne from "@/public/assets/images/xpertOne.png";
 import JiffyPrep from "@/public/assets/images/jiffyPrep.png";
 import { motion } from "framer-motion";
