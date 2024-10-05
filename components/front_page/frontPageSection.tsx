@@ -9,6 +9,7 @@ import ComputerMockup from "@/public/assets/images/developer.png";
 import GabrielPicture from "@/public/assets/images/gabriel_chill.png";
 import Flutter from "@/public/assets/images/flutter.png";
 import NextJs from "@/public/assets/images/Next-JS.png";
+import AnimatedCodeEditor from "../animatedCode/animatedCode";
 
 interface LandingPageProps {
   whyMeRef: React.RefObject<HTMLDivElement>;
@@ -287,13 +288,6 @@ export default function LandingPage({
 
           {/* Decorative elements */}
           <div className="mt-20 relative">
-            <Image
-              src={ComputerMockup.src}
-              alt="Laptop mockup"
-              width={800}
-              height={500}
-              className="mx-auto rounded-lg shadow-2xl"
-            />
             <motion.img
               src={NextJs.src}
               alt="NextJs"
@@ -310,6 +304,9 @@ export default function LandingPage({
             />
           </div>
         </main>
+        <section className="container mx-auto px-4 py-16">
+          <AnimatedCodeEditor />
+        </section>
       </div>
     </div>
   );
