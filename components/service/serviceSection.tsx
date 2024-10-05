@@ -108,7 +108,7 @@ export default function ServiceSection() {
           tailored to your success
         </h3>
 
-        <div className="sticky top-4 z-10">
+        <div className="sticky top-4 z-10 hidden md:block">
           <div
             ref={toggleRef}
             className="bg-gray-800 p-2 rounded-full mb-12 w-full max-w-4xl mx-auto"
