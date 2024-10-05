@@ -37,14 +37,14 @@ export default function PresentationSection() {
           </h2>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-12">
-          <span className="text-3xl font-extrabold tracking-wider text-gray-300 opacity-80 hover:opacity-100 transition-opacity duration-200">
+        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-12">
+          <span className="text-xl md:text-3xl font-extrabold tracking-wider text-gray-300 opacity-80 hover:opacity-100 transition-opacity duration-200">
             LAZONEGRISE
           </span>
-          <span className="text-3xl font-extrabold tracking-wider text-gray-300 opacity-80 hover:opacity-100 transition-opacity duration-200">
+          <span className="text-xl md:text-3xl font-extrabold tracking-wider text-gray-300 opacity-80 hover:opacity-100 transition-opacity duration-200">
             ATELIER-SOI
           </span>
-          <span className="text-3xl font-extrabold tracking-wider text-gray-300 opacity-80 hover:opacity-100 transition-opacity duration-200">
+          <span className="text-xl md:text-3xl font-extrabold tracking-wider text-gray-300 opacity-80 hover:opacity-100 transition-opacity duration-200">
             JIFFYPREP-INTERVIEWS
           </span>
         </div>
