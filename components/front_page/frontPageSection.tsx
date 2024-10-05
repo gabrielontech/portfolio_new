@@ -242,8 +242,8 @@ export default function LandingPage({
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-600 mb-10"
           >
-            Agency-quality NextJs websites / Flutter App with the personal touch
-            of a freelancer.
+            Agency-quality NextJs websites / Flutter mobile apps with the
+            personal touch of a freelancer.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
