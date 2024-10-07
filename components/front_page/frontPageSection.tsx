@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ComputerMockup from "@/public/assets/images/developer.png";
-import GabrielPicture from "@/public/assets/images/gabriel_chill.png";
+import GabrielPicture from "@/public/assets/images/gabriel_nobg.png";
 import Flutter from "@/public/assets/images/flutter.png";
 import NextJs from "@/public/assets/images/Next-JS.png";
 import AnimatedCodeEditor from "../animatedCode/animatedCode";
@@ -98,13 +98,13 @@ export default function LandingPage({
         <header className="container mx-auto px-4 py-6">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
-              <div className="w-16 h-16  rounded-full overflow-hidden">
+              <div className="w-16 h-16 bg-indigo-100  rounded-full overflow-hidden">
                 <Image
                   src={GabrielPicture.src}
                   alt="Profile"
-                  width={50}
-                  height={50}
-                  className="object-cover w-full h-full"
+                  width={64}
+                  height={64}
+                  className="object-cover object-top w-full h-full"
                 />
               </div>
               <div>
@@ -315,4 +315,3 @@ export default function LandingPage({
     </div>
   );
 }
-
