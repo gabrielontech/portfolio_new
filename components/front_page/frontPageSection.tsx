@@ -27,23 +27,10 @@ export default function LandingPage({
   faqsRef,
 }: LandingPageProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref.current) {
@@ -85,14 +72,6 @@ export default function LandingPage({
       />
 
       {/* Mouse follower */}
-      <motion.div
-        className="hidden md:block w-6 h-6 rounded-full bg-indigo-500 fixed mix-blend-difference"
-        style={{
-          pointerEvents: "none",
-          left: mousePosition.x - 12,
-          top: mousePosition.y - 12,
-        }}
-      />
 
       <div className="relative z-10">
         <header className="container mx-auto px-4 py-6">
