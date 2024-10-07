@@ -287,22 +287,6 @@ export default function LandingPage({
           </motion.div>
 
           {/* Decorative elements */}
-          <div className="mt-20 relative">
-            <motion.img
-              src={NextJs.src}
-              alt="NextJs"
-              className="absolute -top-10 -left-10 w-20 h-20"
-              animate={{ rotate: -360 }}
-              transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-            />
-            <motion.img
-              src={Flutter.src}
-              alt="Flutter"
-              className="absolute -bottom-0 -right-10 w-24 h-24"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            />
-          </div>
         </main>
         <section className="container mx-auto px-4 py-16">
           <div className="h-[400px] overflow-hidden">
