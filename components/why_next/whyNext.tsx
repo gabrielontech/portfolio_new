@@ -142,14 +142,13 @@ export default function WhyNextJsSection() {
           <h4 className="text-2xl font-bold text-center mb-8">
             Trusted by industry leaders
           </h4>
-          <div className="flex justify-center items-center h-20 relative">
-            {companyLogos.map((logo, index) => (
-              <div key={logo.name} className="mx-4">
+          <div className="flex justify-center items-center space-x-8">
+            {companyLogos.map((logo) => (
+              <div key={logo.name} className="w-32 h-16 relative">
                 <Image
                   src={logo.src}
                   alt={`${logo.name} logo`}
-                  width={120}
-                  height={40}
+                  fill
                   className="object-contain"
                 />
               </div>
