@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "How much does a website cost?",
     answer:
-      "Website costs can vary widely based on your needs. A basic informational website might start around $5,000, while a complex e-commerce site could cost $20,000 or more. We offer customized quotes based on your specific requirements and budget.",
+      "Website costs can vary widely based on your needs. A basic informational website might start around $2,500, while a complex e-commerce site could cost $20,000 or more. We offer customized quotes based on your specific requirements and budget.",
   },
   {
     question: "I have a design already. Can you build it?",
