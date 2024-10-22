@@ -213,11 +213,10 @@ export default function ServiceSection() {
                       <Image
                         src={option.image}
                         alt={option.label}
-                        layout="responsive"
+                        
                         width={400}
                         height={300}
-                        objectFit="cover"
-                        className="rounded-lg"
+                        style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
                       />
                       {/* <motion.div
                         className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 mix-blend-overlay"
@@ -251,8 +250,9 @@ export default function ServiceSection() {
                             <Image
                               src={tech.logo}
                               alt={`${tech.name} logo`}
-                              layout="fill"
-                              objectFit="contain"
+                              fill
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                              style={{ objectFit: 'contain' }}
                             />
                             <motion.div
                               className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 mix-blend-overlay"

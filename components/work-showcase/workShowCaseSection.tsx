@@ -5,6 +5,7 @@ import AtelierSoi from "@/public/assets/images/ateliersoi.png";
 import ZoneGrise from "@/public/assets/images/zoneGrise.png";
 import xpertOne from "@/public/assets/images/xpertOne.png";
 import JiffyPrep from "@/public/assets/images/jiffyPrep.png";
+import OkFormation from "@/public/assets/images/OkFormation.png";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
@@ -24,16 +25,6 @@ const cards = [
     image: ZoneGrise.src,
   },
   {
-    title: "MICRO SASS",
-    subtitle: "JiffyPrep Interviews",
-    description:
-      "JiffyPrep interviews is a web platform that uses the power of AI to help candidates prepare for job interviews. The platform provides a PDF containing the resources needed to prepare for a job interview.",
-    buttonText: "View project",
-    bgColor: "bg-purple-100",
-    projectUrl: "https://jiffyprepinterviews.com/fr",
-    image: JiffyPrep.src,
-  },
-  {
     title: "CRM & LANDING PAGE",
     subtitle: "X-pert One",
     description:
@@ -43,6 +34,28 @@ const cards = [
     projectUrl: "https://www.xpertone.fr/",
     image: xpertOne.src,
   },
+  {
+    title: "LANDING PAGE",
+    subtitle: "OkFormation",
+    description:
+      "I designed and developed a high-converting landing page for OkFormation, a leading online education platform. This page showcases their expert-led courses in popular design tools like Adobe XD, Figma, and Canva. Built with Next.js and Tailwind CSS, the responsive design ensures an optimal user experience across all devices. The page effectively highlights course benefits, instructor expertise, and student success stories, driving engagement and conversions for their digital design training programs.",
+    buttonText: "In progress",
+    bgColor: "bg-indigo-100",
+    projectUrl: "",
+    inProgress: true,
+    image: OkFormation.src,
+  },
+  {
+    title: "MICRO SASS",
+    subtitle: "JiffyPrep Interviews",
+    description:
+      "JiffyPrep interviews is a web platform that uses the power of AI to help candidates prepare for job interviews. The platform provides a PDF containing the resources needed to prepare for a job interview.",
+    buttonText: "View project",
+    bgColor: "bg-purple-100",
+    projectUrl: "https://jiffyprepinterviews.com/fr",
+    image: JiffyPrep.src,
+  },
+
   {
     title: "LANDING PAGE",
     subtitle: "Atelier Soi",
@@ -364,3 +377,4 @@ export default function WorkShowcaseSection() {
 //     </section>
 //   );
 // }
+

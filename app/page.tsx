@@ -25,7 +25,6 @@ export default function Home() {
         faqsRef={faqsRef}
         presentationRef={presentationRef}
       />
-
       <div ref={presentationRef}>
         <PresentationSection />
       </div>
@@ -36,7 +35,6 @@ export default function Home() {
       <div ref={workRef}>
         <WorkShowcaseSection />
       </div>
-    
       <div ref={faqsRef}>
         <FAQSection />
       </div>
