@@ -20,7 +20,7 @@ const cards = [
       "I developed an e-commerce website for a lifestyle coach, featuring the sale of e-training courses. The site integrates Stripe for secure payment processing, providing a seamless shopping experience for customers purchasing digital products.",
     buttonText: "In progress",
     bgColor: "bg-indigo-100",
-    projectUrl: "",
+    projectUrl: "https://www.zonagri.com/",
     inProgress: true,
     image: ZoneGrise.src,
   },
@@ -162,7 +162,12 @@ export default function WorkShowcaseSection() {
                             ease: "easeInOut",
                           }}
                         >
-                          <Button className="self-start text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-gray-300 text-gray-700 cursor-not-allowed">
+                          <Button
+                            onClick={() => {
+                              window.open(card.projectUrl, "_blank");
+                            }}
+                            className="self-start text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-gray-300 text-gray-700"
+                          >
                             In progress...
                           </Button>
                         </motion.div>
