@@ -21,7 +21,6 @@ const cards = [
     buttonText: "In progress",
     bgColor: "bg-indigo-100",
     projectUrl: "https://www.zonagri.com/",
-    inProgress: true,
     image: ZoneGrise.src,
   },
   {
@@ -41,8 +40,7 @@ const cards = [
       "I designed and developed a high-converting landing page for OkFormation, a leading online education platform. This page showcases their expert-led courses in popular design tools like Adobe XD, Figma, and Canva. Built with Next.js and Tailwind CSS, the responsive design ensures an optimal user experience across all devices. The page effectively highlights course benefits, instructor expertise, and student success stories, driving engagement and conversions for their digital design training programs.",
     buttonText: "In progress",
     bgColor: "bg-indigo-100",
-    projectUrl: "",
-    inProgress: true,
+    projectUrl: "https://ok-formation.vercel.app/",
     image: OkFormation.src,
   },
   {
@@ -153,7 +151,7 @@ export default function WorkShowcaseSection() {
                       <p className="text-base sm:text-lg text-gray-700 lg:text-xl mb-6 sm:mb-8 leading-relaxed pr-16">
                         {card.description}
                       </p>
-                      {card.inProgress ? (
+                      {/* {card.inProgress ? (
                         <motion.div
                           animate={{ opacity: [0.6, 1, 0.6] }}
                           transition={{
@@ -171,7 +169,7 @@ export default function WorkShowcaseSection() {
                             In progress...
                           </Button>
                         </motion.div>
-                      ) : (
+                      ) : ( */}
                         <Button
                           onClick={() => {
                             window.open(card.projectUrl, "_blank");
@@ -181,7 +179,7 @@ export default function WorkShowcaseSection() {
                           {card.buttonText}
                           <ChevronRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
                         </Button>
-                      )}
+                      {/* )} */}
                     </div>
                   </CardContent>
                   <div className="absolute right-4 top-1/2 transform -translate-y-1/2 hidden md:flex flex-col space-y-4">
