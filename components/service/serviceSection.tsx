@@ -107,7 +107,7 @@ export default function ServiceSection() {
   return (
     <section ref={sectionRef} className="bg-gray-900 text-white py-20">
 
-    <div className="max-w-7xl mx-auto h-screen">
+    <div className="max-w-7xl mx-auto py-16 md:py-24">
         <div className="text-center mb-16 space-y-4">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold max-w-4xl mx-auto leading-tight">
             You don&apos;t have a traffic problem...
@@ -163,7 +163,7 @@ export default function ServiceSection() {
 
 
 
-      <div className="max-w-7xl mx-auto h-screen">
+      <div className="max-w-7xl mx-auto py-16 md:py-24">
         <Card className="border-2 border-white/20 bg-gray-800/30 backdrop-blur-sm rounded-xl shadow-2xl transform hover:scale-[1.01] transition-all duration-300 p-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/10" />
           
@@ -226,7 +226,6 @@ export default function ServiceSection() {
 
 
       <div className="container bg-gray-100 mx-auto px-4">
-        <h2 className="text-gray-600 text-2xl mb-4">LET'S DIVE IN</h2>
         <h3 className="text-gray-900 text-5xl font-bold mb-8">
           Powerful software solutions,
           <br />

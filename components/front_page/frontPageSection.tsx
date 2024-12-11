@@ -254,7 +254,7 @@ export default function LandingPage({
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex items-center justify-center gap-1 mb-8"
+            className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-1 mb-8"
           >
             <div className="flex -space-x-2">
               <img src={JuliaPics.src} alt="business owner" className="w-10 h-10 rounded-full border-2 border-white" />
@@ -263,7 +263,7 @@ export default function LandingPage({
               <img src={stanley.src} alt="business owner" className="w-10 h-10 rounded-full border-2 border-white" />
             </div>
             <div className="flex flex-col gap-1 text-sm font-medium">
-              <div className="flex text-lg">
+              <div className="flex justify-center md:justify-start text-lg">
                 ⭐⭐⭐⭐⭐
               </div>
               <span className="text-lg">20+ Business owners love my work</span>
