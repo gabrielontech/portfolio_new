@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import profilePicture from "@/public/assets/images/gabriel_nobg.png";
+import TestimonialSection from "../favorite_testimonial/favoriteTestimonial";
 
 export default function PresentationSection() {
   return (
@@ -118,18 +119,9 @@ export default function PresentationSection() {
           </h2>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-12">
-          <span className="text-xl md:text-3xl font-extrabold tracking-wider text-gray-300 opacity-80 hover:opacity-100 transition-opacity duration-200">
-            LAZONEGRISE
-          </span>
-          <span className="text-xl md:text-3xl font-extrabold tracking-wider text-gray-300 opacity-80 hover:opacity-100 transition-opacity duration-200">
-            ATELIER-SOI
-          </span>
-          <span className="text-xl md:text-3xl font-extrabold tracking-wider text-gray-300 opacity-80 hover:opacity-100 transition-opacity duration-200">
-            JIFFYPREP-INTERVIEWS
-          </span>
-        </div>
+        
       </div>
+      <TestimonialSection />
     </section>
   );
 }

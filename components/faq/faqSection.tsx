@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "How long does a website take to build?",
     answer:
-      "The time it takes to build a website can vary depending on its complexity and your specific requirements. A simple website might take 2-4 weeks, while a more complex one could take 2-3 months or more. We'll provide a more accurate timeline after discussing your project in detail.",
+      "The time it takes to build a website can vary depending on its complexity and your specific requirements. A simple website might take 1-2 weeks, while a more complex one could take 2-4 months or more. We'll provide a more accurate timeline after discussing your project in detail.",
   },
   {
     question: "How much does a website cost?",

@@ -13,16 +13,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import MockupToolbar from "../mockup/mockup_bar";
 
 const cards = [
-  {
-    title: "SITE E-COM",
-    subtitle: "La Zone Grise",
-    description:
-      "I developed an e-commerce website for a lifestyle coach, featuring the sale of e-training courses. The site integrates Stripe for secure payment processing, providing a seamless shopping experience for customers purchasing digital products.",
-    buttonText: "In progress",
-    bgColor: "bg-indigo-100",
-    projectUrl: "https://www.zonagri.com/",
-    image: ZoneGrise.src,
-  },
+  
   {
     title: "CRM & LANDING PAGE",
     subtitle: "X-pert One",
@@ -37,10 +28,10 @@ const cards = [
     title: "LANDING PAGE",
     subtitle: "OkFormation",
     description:
-      "I designed and developed a high-converting landing page for OkFormation, a leading online education platform. This page showcases their expert-led courses in popular design tools like Adobe XD, Figma, and Canva. Built with Next.js and Tailwind CSS, the responsive design ensures an optimal user experience across all devices. The page effectively highlights course benefits, instructor expertise, and student success stories, driving engagement and conversions for their digital design training programs.",
-    buttonText: "In progress",
+      "I designed and developed a high-converting landing page for OkFormation, a leading online education platform. This page showcases their expert-led courses in popular design tools like Adobe XD, Figma, and Canva.",
+    buttonText: "View project",
     bgColor: "bg-indigo-100",
-    projectUrl: "https://ok-formation.vercel.app/",
+    projectUrl: "https://www.okformation.online/",
     image: OkFormation.src,
   },
   {
@@ -52,6 +43,16 @@ const cards = [
     bgColor: "bg-purple-100",
     projectUrl: "https://jiffyprepinterviews.com/fr",
     image: JiffyPrep.src,
+  },
+  {
+    title: "SITE E-COM",
+    subtitle: "La Zone Grise",
+    description:
+      "I developed an e-commerce website for a lifestyle coach, featuring the sale of e-training courses. The site integrates Stripe for secure payment processing, providing a seamless shopping experience for customers purchasing digital products.",
+    buttonText: "In progress",
+    bgColor: "bg-indigo-100",
+    projectUrl: "https://www.zonagri.com/",
+    image: ZoneGrise.src,
   },
 
   {

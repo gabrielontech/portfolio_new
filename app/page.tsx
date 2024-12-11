@@ -25,11 +25,12 @@ export default function Home() {
         faqsRef={faqsRef}
         presentationRef={presentationRef}
       />
-      <div ref={presentationRef}>
-        <PresentationSection />
-      </div>
+      
       <div ref={whyMeRef}>
         <ServiceSection />
+      </div>
+      <div ref={presentationRef}>
+        <PresentationSection />
       </div>
       <WhyNextJsSection />
       <div ref={workRef}>
