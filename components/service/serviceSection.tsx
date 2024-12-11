@@ -105,7 +105,7 @@ export default function ServiceSection() {
   };
 
   return (
-    <section ref={sectionRef} className="bg-gray-900 text-white py-20">
+    <section  className="bg-gray-900 text-white py-20">
 
     <div className="max-w-7xl mx-auto py-16 md:py-24">
         <div className="text-center mb-16 space-y-4">
@@ -225,8 +225,8 @@ export default function ServiceSection() {
 
 
 
-      <div className="container bg-gray-100 mx-auto px-4">
-        <h3 className="text-gray-900 text-5xl font-bold mb-8">
+      <div ref={sectionRef} className="container bg-gray-100 mx-auto px-4 md:px-8 lg:px-16 py-16 md:py-24">
+        <h3 className="text-gray-900 text-5xl font-bold mb-16">
           Powerful software solutions,
           <br />
           tailored to your success
