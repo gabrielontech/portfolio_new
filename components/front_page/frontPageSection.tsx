@@ -174,7 +174,7 @@ export default function LandingPage({
                   <a
                     href="https://calendly.com/gkitoko-pro"
                     target="_blank"
-                    className="text-white font-medium  bg-indigo-600 hover:bg-indigo-800 px-4 py-2 rounded-full"
+                    className="text-white font-semibold text-lg bg-indigo-600 hover:bg-indigo-800 px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                   >
                     Book a call
                     <motion.span
@@ -227,7 +227,7 @@ export default function LandingPage({
                   <motion.a
                     href="https://calendly.com/gkitoko-pro"
                     target="_blank"
-                    className="text-white font-medium  bg-indigo-600 hover:bg-indigo-800 px-4 py-2 rounded-full"
+                    className="text-white font-semibold text-lg bg-indigo-600 hover:bg-indigo-800 px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                   >
                     Book a call
                     <motion.span
@@ -300,12 +300,12 @@ export default function LandingPage({
             <motion.a
               href="https://calendly.com/gkitoko-pro"
               target="_blank"
-              className="group bg-indigo-600 hover:bg-indigo-800 text-white px-16 py-6 rounded-md transition duration-300 flex items-center"
+              className="group bg-indigo-600 hover:bg-indigo-800 text-white px-16 py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center text-xl font-bold"
               whileHover={{ scale: 1.05 }}
             >
               Claim Your Free Strategy Call Now
               <motion.span
-                className="ml-2 inline-block"
+                className="ml-3 inline-block text-2xl"
                 initial={{ x: 0 }}
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 700, damping: 15 }}
