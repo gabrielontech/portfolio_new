@@ -61,11 +61,8 @@ const getCards = (t: any) => [
   },
 ];
 
-interface WorkShowProps {
-  locale : string;
-}
 
-export default function WorkShowcaseSection({locale} : WorkShowProps) {
+export default function WorkShowcaseSection() {
   const t = useTranslations('work');
   const w = useTranslations('work_cards')
   const [currentCard, setCurrentCard] = useState(0);
