@@ -2,7 +2,7 @@
     "navbar":
     {"cta_button":"Book a call",
     "presence":"Ready to help",
-    "section1":"Why me",
+    "section1":"About",
     "section2":"Work"},
     "default":{},
     "services":
@@ -45,5 +45,63 @@
     "design_satisfaction":{"question":"What if I don't like the design?","answer":"Your satisfaction is our priority. I follow an iterative design process and welcome your feedback at every stage. If you're not happy with any aspect of the design, we'll work with you to revise it until it meets your expectations."},
     "load_time":{"question":"Load time is important to me. Will the website load quickly?","answer":"I prioritize performance in all our projects. I use modern web technologies, optimize images, minimize HTTP requests, and follow best practices to ensure your website loads quickly. I also provide recommendations for hosting that will further enhance your site's speed."}
     }
-   }
+   },
+   "hero": {
+    "cta_principal": "Claim your free strategy call now",
+    "main_hook1": "Get a high-quality B2B website",
+    "main_hook2": "that turns curious visitors into clients.",
+    "social_proof": "+20 founders love my work",
+    "description": "Using <strike>no-code tools</strike> the latest engineering tools and best practices, I create websites that <bold>increase visitor trust</bold> and <bold>engagement</bold>."
+},
+"presentation": {
+    "quote": "The future belongs to those who believe in the beauty of their dreams.",
+    "description": "As a passionate web developer with over 5 years of experience, I strive to turn innovative ideas into reality. My goal is to create seamless, user-friendly experiences that make a lasting impact.",
+    "experience": "5+ YEARS OF WEB DEVELOPMENT EXPERIENCE"
+},
+"work": {
+    "section_title": "WORK",
+    "section_subtitle": "A glimpse of what I can do for you",
+    "view_project": "View project",
+    "in_progress": "In progress..."
+},
+"work_cards": {
+    "xpertone": {
+        "title": "CRM & LANDING PAGE",
+        "subtitle": "X-pert One",
+        "description": "I developed a website that connects expert professionals with businesses. This project included creating a dynamic landing page and implementing a custom CRM system to manage client relationships and expert profiles.",
+        "buttonText": "View project"
+    },
+    "okformation": {
+        "title": "LANDING PAGE",
+        "subtitle": "OkFormation",
+        "description": "I designed and developed a high-converting landing page for OkFormation, a leading online training platform. This page showcases their expert-led courses on popular design tools like Adobe XD, Figma, and Canva.",
+        "buttonText": "View project"
+    },
+    "jiffyprep": {
+        "title": "MICRO SASS",
+        "subtitle": "JiffyPrep Interviews",
+        "description": "JiffyPrep Interviews is a web platform that uses AI power to help candidates prepare for their job interviews. The platform provides a PDF containing the necessary resources to prepare for a job interview.",
+        "buttonText": "View project"
+    },
+    "zonegrise": {
+        "title": "E-COM SITE",
+        "subtitle": "La Zone Grise",
+        "description": "I developed an e-commerce site for a life coach, offering online training courses. The site integrates Stripe for secure payment processing, providing a smooth purchasing experience for customers buying digital products.",
+        "buttonText": "In progress"
+    },
+    "ateliersoi": {
+        "title": "LANDING PAGE",
+        "subtitle": "Atelier Soi",
+        "description": "I created an elegant and professional landing page for a client specialized in helping professionals dealing with burnout, professional stress management, and taking control of their lives. This project was built with Next.js and Tailwind CSS, ensuring a smooth user experience and modern aesthetics.",
+        "buttonText": "View project"
+    }
+},
+"footer": {
+    "email_intro": "Got a question? Email me at",
+    "cta_title": "Let's build something",
+    "cta_subtitle": "great together",
+    "cta_button": "Let's work together →",
+    "made_with": "Made with ❤️ by me.",
+    "question": "Got a question?"
+}
 }
