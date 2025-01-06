@@ -1,11 +1,15 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
+
 
 interface FloatingCTAProps {
   isVisible: boolean;
 }
 
 export default function FloatingCTA({ isVisible }: FloatingCTAProps) {
+  const t = useTranslations('navbar');
+ 
   return (
     <AnimatePresence>
       {isVisible && (
@@ -20,7 +24,7 @@ export default function FloatingCTA({ isVisible }: FloatingCTAProps) {
             target="_blank"
             className="flex items-center space-x-2 bg-indigo-600 hover:bg-indigo-800 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl"
           >
-            <span>Book a call</span>
+            <span>{t('cta_button')}</span>
             <motion.span
               className="inline-block"
               initial={{ x: 0 }}

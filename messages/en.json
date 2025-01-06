@@ -1,0 +1,49 @@
+{
+    "navbar":
+    {"cta_button":"Book a call",
+    "presence":"Ready to help",
+    "section1":"Why me",
+    "section2":"Work"},
+    "default":{},
+    "services":
+    {
+        "main_service_paragraph1":"As a full-stack developer, I offer end-to-end solutions that seamlessly integrate front-end and back-end\ntechnologies. From responsive user interfaces to robust server-side applications, I ensure your project is built with scalability and performance in mind.",
+    "main_service_paragraph2":" I specialize in creating responsive web applications and native mobile apps that provide a consistent user experience across all devices. Whether you need a  progressive web app or a native mobile solution, I can\ndeliver a product that meets your users' needs.",
+    "main_service_paragraph3":" I stay at the forefront of technology, leveraging the latest tools and frameworks to build cutting-edge  applications. My expertise includes modern JavaScript frameworks, cloud services, and emerging technologies to ensure your project is built with the best tools for the job.",
+    "main_service_paragraph4":"I believe in true partnership with my clients. From the initial concept to the final deployment, I'm committed to accompanying you through every step of the project. My approach is centered on open communication, regular updates, and always finding time to discuss your needs and concerns.\n\nBy choosing to work with me, you're not just getting a developer – you're getting a dedicated partner who is invested in your project's success. I ensure that your vision is realized while providing expert guidance and support throughout the entire development process.",
+    "main_service_title1":"Powerful software solutions,",
+    "main_service_title2":"tailored to your success",
+    "service_problem_details1":"In a sea of competitors, it's hard to make your brand stand out when everyone is fighting for attention.\n",
+    "service_problem_details2":"Struggling to turn site visitors into leads? Your strategies might be missing the mark with your target audience.\n",
+    "service_problem_details3":"Getting clicks is just the start. The real challenge lies in converting those clicks into loyal customers.\n",
+    "service_problem_global_paragraph":"The REAL challenge is turning clicks into conversions.",
+    "service_problem_global_title1":"You don't have a traffic problem...",
+    "service_problem_global_title2":" you're failing to convert that traffic",
+    "service_problem_global_title3":"into leads.",
+    "service_problem_title1":"Lost in the Competition",
+    "service_problem_title2":"Leads not Following",
+    "service_problem_title3":"Customer Conversion Challenges",
+    "service_solution_details1":"Crafting words that engage, resonate, and ultimately convince your audience to take action.",
+    "service_solution_details2":"Design a brand identity to standout in a crowded marketplace.\n",
+    "service_solution_details3":"Creating visually appealing designs that are optimized for maximum conversion rates.\n",
+    "service_solution_global_paragraph1":"Designs that captivate, copy that resonates, and development that converts.\n             ",
+    "service_solution_global_paragraph2":"Moving beyond surface metrics to emotional impact that turns browsers into buyers.",
+    "service_solution_global_title1":"The solution:",
+    "service_solution_global_title2":" Conversion-focused design.",
+    "service_solution_title1":"Compelling Copy",
+    "service_solution_title2":"Brand Identity",
+    "service_solution_title3":"Conversion-focused Design",
+    "cta_buttons":{"boost_conversions":"Start Boosting Your Conversions Now","upgrade_website":"Upgrade Your Website Design","modernize_tech":"Modernize Your Tech Stack","book_call":"Let's Book a Call with Gabriel"},
+    "toggle_options":{"full_stack":"Full-Stack Solutions","mobile_web":"Mobile & Web","tech_stack":"Cutting-Edge Tech","client_focused":"Client-Focused Approach"}},
+    "testimonial":{"quote":"Gabriel is not only a great developer but also a great person. He is very dedicated to his work and always goes above and beyond to ensure that the project is successful.","author_name":"Gael","author_title":"Founder, LazoneGrise","company_name":"LAZONEGRISE"},
+    "faq":{"section_title":"FAQ","section_subtitle":"Frequently Asked Questions",
+    "questions":{
+        "website_time":{"question":"How long does a website take to build?",
+    "answer":"The time it takes to build a website can vary depending on its complexity and your specific requirements. A simple website might take 1-2 weeks, while a more complex one could take 2-4 months or more. We'll provide a more accurate timeline after discussing your project in detail."},
+    "website_cost":{"question":"How much does a website cost?","answer":"Website costs can vary widely based on your needs. A basic informational website might start around $2,500, while a complex e-commerce site could cost $20,000 or more. I offer customized quotes based on your specific requirements and budget."},
+    "existing_design":{"question":"I have a design already. Can you build it?","answer":"We're happy to work with existing designs. Just provide us with your design files (e.g., Figma, Sketch, or PSD), and we'll bring them to life with clean, efficient code that matches your vision perfectly."},
+    "design_satisfaction":{"question":"What if I don't like the design?","answer":"Your satisfaction is our priority. I follow an iterative design process and welcome your feedback at every stage. If you're not happy with any aspect of the design, we'll work with you to revise it until it meets your expectations."},
+    "load_time":{"question":"Load time is important to me. Will the website load quickly?","answer":"I prioritize performance in all our projects. I use modern web technologies, optimize images, minimize HTTP requests, and follow best practices to ensure your website loads quickly. I also provide recommendations for hosting that will further enhance your site's speed."}
+    }
+   }
+}

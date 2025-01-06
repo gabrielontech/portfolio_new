@@ -1,0 +1,139 @@
+{
+  "navbar": {
+    "cta_button": "Réserver un appel",
+    "presence": "Prêt à aider",
+    "section1": "A propos",
+    "section2": "Mes travaux"
+  },
+  "default": {},
+  "services": {
+    "main_service_paragraph1": "En tant que développeur full-stack, je propose des solutions de bout en bout qui intègrent parfaitement les technologies front-end et back-end. Des interfaces utilisateur réactives aux applications robustes côté serveur, je m'assure que votre projet est conçu dans un souci d'évolutivité et de performances.",
+    "main_service_paragraph2": "Je me spécialise dans la création d'applications Web réactives et d'applications mobiles natives qui offrent une expérience utilisateur cohérente sur tous les appareils. Que vous ayez besoin d'une application Web progressive ou d'une solution mobile native, je peux fournir un produit qui répond aux besoins de vos utilisateurs.",
+    "main_service_paragraph3": "Je reste à la pointe de la technologie, en exploitant les outils et les frameworks les plus récents pour créer des applications de pointe. Mon expertise comprend les frameworks JavaScript modernes, les services cloud et les technologies émergentes pour garantir que votre projet est construit avec les meilleurs outils pour le travail.",
+    "main_service_paragraph4": "Je crois en un véritable partenariat avec mes clients. Du concept initial au déploiement final, je m'engage à vous accompagner à chaque étape du projet. Mon approche est centrée sur une communication ouverte, des mises à jour régulières et toujours trouver du temps pour discuter de vos besoins et préoccupations. En choisissant de travailler avec moi, vous n'obtenez pas seulement un développeur, vous obtenez un partenaire dédié qui s'investit dans la réussite de votre projet. Je m'assure que votre vision se concrétise tout en vous fournissant des conseils et un soutien d'expert tout au long du processus de développement.",
+    "main_service_title1": "Des solutions logicielles puissantes,",
+    "main_service_title2": "adapté à votre réussite",
+    "service_problem_details1": "Dans une mer de concurrents, il est difficile de faire en sorte que votre marque se démarque lorsque tout le monde se bat pour attirer l'attention.",
+    "service_problem_details2": "Vous avez du mal à transformer les visiteurs de votre site en prospects ? Vos stratégies ne parviennent peut-être pas à atteindre votre public cible.",
+    "service_problem_details3": "Obtenir des clics n'est qu'un début. Le véritable défi consiste à convertir ces clics en clients fidèles.",
+    "service_problem_global_paragraph": "Le VRAI défi est de transformer les clics en conversions.",
+    "service_problem_global_title1": "Vous n'avez pas de problème de circulation...",
+    "service_problem_global_title2": "vous ne parvenez pas à convertir ce trafic",
+    "service_problem_global_title3": "en prospects.",
+    "service_problem_title1": "Perdu dans la compétition",
+    "service_problem_title2": "Les prospects ne suivent pas",
+    "service_problem_title3": "Défis de conversion des clients",
+    "service_solution_details1": "Rédiger des mots qui engagent, résonnent et, en fin de compte, convainquent votre public d'agir.",
+    "service_solution_details2": "Concevez une identité de marque pour vous démarquer sur un marché encombré.",
+    "service_solution_details3": "Créer des designs visuellement attrayants et optimisés pour des taux de conversion maximum.",
+    "service_solution_global_paragraph1": "Des designs qui captivent, des textes qui résonnent et un développement qui convertit.",
+    "service_solution_global_paragraph2": "Au-delà des mesures de surface, accédez à un impact émotionnel qui transforme les navigateurs en acheteurs.",
+    "service_solution_global_title1": "La solution:",
+    "service_solution_global_title2": "Conception axée sur la conversion.",
+    "service_solution_title1": "Texte convaincant",
+    "service_solution_title2": "Identité de marque",
+    "service_solution_title3": "Conception axée sur la conversion",
+    "cta_buttons": {
+      "boost_conversions": "Commencez à Booster vos Conversions",
+      "upgrade_website": "Améliorez votre Design Web",
+      "modernize_tech": "Modernisez votre Stack Technique",
+      "book_call": "Réservez un Appel avec Gabriel"
+    },
+    "toggle_options": {
+      "full_stack": "Solutions Full-Stack",
+      "mobile_web": "Mobile & Web",
+      "tech_stack": "Technologies de Pointe",
+      "client_focused": "Approche Client"
+    }
+  },
+  "hero": {
+    "cta_principal": "Réclamez votre appel stratégique gratuit maintenant",
+    "main_hook1": "Obtenez un site Web B2B de haute qualité",
+    "main_hook2": "qui transforme vos visiteurs curieux en clients.",
+    "social_proof": "+20 fondateurs apprécient mon travail",
+    "description": "En utilisant <strike>des outils no-code</strike> les derniers outils d'ingénierie et les meilleures pratiques, je crée des sites web qui <bold>augmentent la confiance</bold> et <bold>l'engagement des visiteurs</bold>."
+  },
+  "presentation": {
+    "quote": "L'avenir appartient à ceux qui croient en la beauté de leurs rêves.",
+    "description": "En tant que développeur web passionné avec plus de 5 ans d'expérience, je m'efforce de transformer des idées innovantes en réalité. Mon objectif est de créer des expériences fluides et conviviales qui ont un impact durable.",
+    "experience": "5+ ANS D'EXPÉRIENCE EN DÉVELOPPEMENT WEB"
+  },
+  "work": {
+    "section_title": "TRAVAUX",
+    "section_subtitle": "Un aperçu de ce que je peux faire pour vous",
+    "view_project": "Voir le projet",
+    "in_progress": "En cours..."
+  },
+  "faq": {
+    "section_title": "FAQ",
+    "section_subtitle": "Questions Fréquemment Posées",
+    "questions": {
+      "website_time": {
+        "question": "Combien de temps faut-il pour créer un site web ?",
+        "answer": "Le temps nécessaire à la création d'un site web peut varier en fonction de sa complexité et de vos besoins spécifiques. Un site simple peut prendre 1 à 2 semaines, tandis qu'un site plus complexe peut prendre 2 à 4 mois ou plus. Je fournirais un calendrier plus précis après avoir discuté de votre projet en détail."
+      },
+      "website_cost": {
+        "question": "Combien coûte un site web ?",
+        "answer": "Les coûts des sites web peuvent varier considérablement selon vos besoins. Un site web informatif de base peut commencer autour de 2 500 €, tandis qu'un site e-commerce complexe peut coûter 20 000 € ou plus. Je propose des devis personnalisés basés sur vos besoins spécifiques et votre budget."
+      },
+      "existing_design": {
+        "question": "J'ai déjà un design. Pouvez-vous le construire ?",
+        "answer": "Je suis heureux de travailler avec des designs existants. Il vous suffit de me fournir vos fichiers de design (par exemple, Figma, Sketch ou PSD), et je le donnerais vie avec un code propre et efficace qui correspond parfaitement à votre vision."
+      },
+      "design_satisfaction": {
+        "question": "Que se passe-t-il si je n'aime pas le design ?",
+        "answer": "Votre satisfaction est notre priorité. Je suis un processus de design itératif et accueille vos commentaires à chaque étape. Si vous n'êtes pas satisfait d'un aspect du design, je travaillerais avec vous pour le réviser jusqu'à ce qu'il réponde à vos attentes."
+      },
+      "load_time": {
+        "question": "Le temps de chargement est important pour moi. Le site se chargera-t-il rapidement ?",
+        "answer": "Nous priorisons la performance dans tous nos projets. Nous utilisons des technologies web modernes, optimisons les images, minimisons les requêtes HTTP et suivons les meilleures pratiques pour garantir que votre site se charge rapidement. Nous fournissons également des recommandations d'hébergement qui amélioreront davantage la vitesse de votre site."
+      }
+    }
+  },
+  "footer": {
+    "email_intro": "Vous avez une question ? Envoyez-moi un email à",
+    "cta_title": "Construisons quelque chose",
+    "cta_subtitle": "de grand ensemble",
+    "cta_button": "Travaillons ensemble →",
+    "made_with": "Fait avec ❤️ par moi.",
+    "question": "Vous avez une question ?"
+  },
+  "work_cards": {
+    "xpertone": {
+      "title": "CRM & LANDING PAGE",
+      "subtitle": "X-pert One",
+      "description": "J'ai développé un site web qui met en relation des professionnels experts avec des entreprises. Ce projet comprenait la création d'une landing page dynamique et l'implémentation d'un système CRM personnalisé pour gérer les relations clients et les profils d'experts.",
+      "buttonText": "Voir le projet"
+    },
+    "okformation": {
+      "title": "LANDING PAGE",
+      "subtitle": "OkFormation",
+      "description": "J'ai conçu et développé une landing page à fort taux de conversion pour OkFormation, une plateforme leader de formation en ligne. Cette page met en valeur leurs cours dirigés par des experts sur des outils de design populaires comme Adobe XD, Figma et Canva.",
+      "buttonText": "Voir le projet"
+    },
+    "jiffyprep": {
+      "title": "MICRO SASS",
+      "subtitle": "JiffyPrep Interviews",
+      "description": "JiffyPrep Interviews est une plateforme web qui utilise la puissance de l'IA pour aider les candidats à préparer leurs entretiens d'embauche. La plateforme fournit un PDF contenant les ressources nécessaires pour préparer un entretien d'embauche.",
+      "buttonText": "Voir le projet"
+    },
+    "zonegrise": {
+      "title": "SITE E-COM",
+      "subtitle": "La Zone Grise",
+      "description": "J'ai développé un site e-commerce pour un coach de vie, proposant la vente de formations en ligne. Le site intègre Stripe pour le traitement sécurisé des paiements, offrant une expérience d'achat fluide pour les clients achetant des produits numériques.",
+      "buttonText": "En cours"
+    },
+    "ateliersoi": {
+      "title": "LANDING PAGE",
+      "subtitle": "Atelier Soi",
+      "description": "J'ai créé une landing page élégante et professionnelle pour un client spécialisé dans l'aide aux professionnels confrontés au burnout, à la gestion du stress professionnel et à la reprise en main de leur vie. Ce projet a été construit avec Next.js et Tailwind CSS, garantissant une expérience utilisateur fluide et une esthétique moderne.",
+      "buttonText": "Voir le projet"
+    }
+  },
+  "testimonial": {
+    "quote": "Gabriel n'est pas seulement un excellent développeur, c'est aussi une personne formidable. Il est très dévoué à son travail et va toujours au-delà pour assurer le succès du projet.",
+    "author_name": "Gael",
+    "author_title": "Fondateur, LazoneGrise",
+    "company_name": "LAZONEGRISE"
+  }
+}

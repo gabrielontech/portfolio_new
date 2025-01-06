@@ -4,8 +4,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import profilePicture from "@/public/assets/images/gabriel_nobg.png";
 import TestimonialSection from "../favorite_testimonial/favoriteTestimonial";
+import { useTranslations } from 'next-intl';
 
 export default function PresentationSection() {
+  const t = useTranslations('presentation');
+
   return (
     <section className="py-20 bg-gray-900 text-white">
       <div className="container mx-auto px-4">
@@ -102,26 +105,22 @@ export default function PresentationSection() {
           </div>
           <div className="w-full md:w-1/2 md:pl-12">
             <blockquote className="text-3xl font-bold italic mb-4">
-              "The future belongs to those who believe in the beauty of their
-              dreams."
+              {t('quote')}
             </blockquote>
             <p className="text-xl">
-              As a passionate web developer with over 5 years of experience, I
-              strive to turn innovative ideas into reality. My goal is to create
-              seamless, user-friendly experiences that make a lasting impact.
+              {t('description')}
             </p>
           </div>
         </div>
 
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold">
-            5+ YEARS OF WEB DEVELOPMENT EXPERIENCE
+            {t('experience')}
           </h2>
         </div>
-
         
+        <TestimonialSection />
       </div>
-      <TestimonialSection />
     </section>
   );
 }

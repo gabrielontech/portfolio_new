@@ -11,63 +11,63 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import MockupToolbar from "../mockup/mockup_bar";
+import { useTranslations } from 'next-intl';
 
-const cards = [
-  
+const getCards = (t: any) => [
   {
-    title: "CRM & LANDING PAGE",
-    subtitle: "X-pert One",
-    description:
-      "I developed a website that connects expert professionals with businesses. This project included creating a dynamic landing page and implementing a custom CRM system to manage client relationships and expert profiles.",
-    buttonText: "View project",
+    title: t('xpertone.title'),
+    subtitle: t('xpertone.subtitle'),
+    description: t('xpertone.description'),
+    buttonText: t('xpertone.buttonText'),
     bgColor: "bg-blue-100",
     projectUrl: "https://www.xpertone.fr/",
     image: xpertOne.src,
   },
   {
-    title: "LANDING PAGE",
-    subtitle: "OkFormation",
-    description:
-      "I designed and developed a high-converting landing page for OkFormation, a leading online education platform. This page showcases their expert-led courses in popular design tools like Adobe XD, Figma, and Canva.",
-    buttonText: "View project",
+    title: t('okformation.title'),
+    subtitle: t('okformation.subtitle'),
+    description: t('okformation.description'),
+    buttonText: t('okformation.buttonText'),
     bgColor: "bg-indigo-100",
     projectUrl: "https://www.okformation.online/",
     image: OkFormation.src,
   },
   {
-    title: "MICRO SASS",
-    subtitle: "JiffyPrep Interviews",
-    description:
-      "JiffyPrep interviews is a web platform that uses the power of AI to help candidates prepare for job interviews. The platform provides a PDF containing the resources needed to prepare for a job interview.",
-    buttonText: "View project",
+    title: t('jiffyprep.title'),
+    subtitle: t('jiffyprep.subtitle'),
+    description: t('jiffyprep.description'),
+    buttonText: t('jiffyprep.buttonText'),
     bgColor: "bg-purple-100",
     projectUrl: "https://jiffyprepinterviews.com/fr",
     image: JiffyPrep.src,
   },
   {
-    title: "SITE E-COM",
-    subtitle: "La Zone Grise",
-    description:
-      "I developed an e-commerce website for a lifestyle coach, featuring the sale of e-training courses. The site integrates Stripe for secure payment processing, providing a seamless shopping experience for customers purchasing digital products.",
-    buttonText: "In progress",
+    title: t('zonegrise.title'),
+    subtitle: t('zonegrise.subtitle'),
+    description: t('zonegrise.description'),
+    buttonText: t('zonegrise.buttonText'),
     bgColor: "bg-indigo-100",
     projectUrl: "https://www.zonagri.com/",
     image: ZoneGrise.src,
   },
-
   {
-    title: "LANDING PAGE",
-    subtitle: "Atelier Soi",
-    description:
-      "I crafted a sleek and professional landing page for a client specializing in helping business professionals overcome burnout, manage work-related stress, and regain control of their lives. This project was built using Next.js and Tailwind CSS, ensuring a seamless user experience and modern design aesthetics.",
-    buttonText: "View project",
+    title: t('ateliersoi.title'),
+    subtitle: t('ateliersoi.subtitle'),
+    description: t('ateliersoi.description'),
+    buttonText: t('ateliersoi.buttonText'),
     bgColor: "bg-violet-100",
     projectUrl: "https://www.atelier-soi.fr/",
     image: AtelierSoi.src,
   },
 ];
 
-export default function WorkShowcaseSection() {
+interface WorkShowProps {
+  locale : string;
+}
+
+export default function WorkShowcaseSection({locale} : WorkShowProps) {
+  const t = useTranslations('work');
+  const w = useTranslations('work_cards')
   const [currentCard, setCurrentCard] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: containerRef });
@@ -82,6 +82,8 @@ export default function WorkShowcaseSection() {
     return () => unsubscribe();
   }, [scrollYProgress, currentCard]);
 
+  const cards = getCards(w);
+
   return (
     <div
       ref={containerRef}
@@ -89,10 +91,10 @@ export default function WorkShowcaseSection() {
     >
       <div className="container mx-auto px-4 relative">
         <h2 className="text-indigo-600 text-2xl mb-4 text-center relative z-10">
-          WORK
+          {t('section_title')}
         </h2>
         <h3 className="text-5xl font-bold mb-16 text-center relative z-10">
-          A taste of what I can do for you
+          {t('section_subtitle')}
         </h3>
       </div>
       <div className="sticky top-0 h-screen overflow-hidden">

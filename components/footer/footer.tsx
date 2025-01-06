@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+  const t = useTranslations('footer');
   const footerRef = useRef<HTMLElement>(null);
   const [progress, setProgress] = useState(0);
 
@@ -44,12 +46,12 @@ export default function Footer() {
             className="text-lg transition-colors duration-500"
             style={{ color: progress > 0.5 ? "white" : "black" }}
           >
-            Got a question? Drop me an email at{" "}
+            {t('email_intro')}{" "}
             <a
-              href="mailto:gkitoko.pro@gmail.com"
+              href="mailto:gabriel@gabrielontech.com"
               className="text-[#7c3aed] hover:underline"
             >
-              gkitoko.pro@gmail.com
+              gabriel@gabrielontech.com
             </a>
           </p>
         </div>
@@ -62,9 +64,9 @@ export default function Footer() {
             <div className="absolute top-0 left-0 w-16 h-1 bg-[#7c3aed]"></div>
             <div className="absolute bottom-0 right-0 w-16 h-1 bg-[#7c3aed]"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
-              Let's build something
+              {t('cta_title')}
               <br />
-              great together
+              {t('cta_subtitle')}
             </h2>
             <div className="text-center">
               <Link
@@ -72,7 +74,7 @@ export default function Footer() {
                 target="_blank"
                 className="inline-block bg-white text-black font-semibold py-3 px-6 rounded-full hover:bg-opacity-90 transition-colors duration-300"
               >
-                Work with me →
+                {t('cta_button')}
               </Link>
             </div>
           </div>
@@ -82,14 +84,14 @@ export default function Footer() {
             progress > 0.7 ? "opacity-100" : "opacity-0"
           }`}
         >
-          <p className="mb-4 md:mb-0">Made with ❤️ by me.</p>
+          <p className="mb-4 md:mb-0">{t('made_with')}</p>
           <p>
-            Got a question?{" "}
+            {t('question')}{" "}
             <a
-              href="mailto:gkitoko.pro@gmail.com"
+              href="mailto:gabriel@gabrielontech.com"
               className="text-[#7c3aed] hover:underline"
             >
-              gkitoko.pro@gmail.com
+              gabriel@gabrielontech.com
             </a>
           </p>
         </div>

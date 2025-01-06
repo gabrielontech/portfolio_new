@@ -6,24 +6,11 @@ import Image from "next/image";
 import FullStack from "@/public/assets/images/computer_full_stack.jpg";
 import MobileWeb from "@/public/assets/images/stats_growth.jpg";
 import clientFocused from "@/public/assets/images/close-up-employee-with-headphones.jpg";
-// import MobileWeb from "@/public/assets/images/mobile_web.jpg";
-// import TechStack from "@/public/assets/images/tech_stack.jpg";
-// import Reliability from "@/public/assets/images/reliability.jpg";
 import TestimonialSection from "../favorite_testimonial/favoriteTestimonial";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 import { Card, CardContent, CardHeader } from "../ui/card";
 import { Frown, HelpCircle, RefreshCw, Star, Gem, DollarSign } from "lucide-react";
-
-const toggleOptions = [
-  { id: "full-stack", label: "Full-Stack Solutions", image: FullStack },
-  { id: "mobile-web", label: "Mobile & Web", image: MobileWeb },
-  { id: "tech-stack", label: "Cutting-Edge Tech", image: FullStack },
-  {
-    id: "client-focused",
-    label: "Client-Focused Approach",
-    image: clientFocused,
-  },
-];
 
 const technologies = [
   {
@@ -52,15 +39,28 @@ const technologies = [
   },
 ];
 
+interface ServicePageProps {
+  whyMeRef: React.RefObject<HTMLDivElement>;
+}
 
-
-
-
-export default function ServiceSection() {
+export default function ServiceSection({
+  whyMeRef
+} : ServicePageProps) {
   const [activeToggle, setActiveToggle] = useState("full-stack");
   const sectionRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations('services');
 
+  const toggleOptions = [
+    { id: "full-stack", label: t('toggle_options.full_stack'), image: FullStack },
+    { id: "mobile-web", label: t('toggle_options.mobile_web'), image: MobileWeb },
+    { id: "tech-stack", label: t('toggle_options.tech_stack'), image: FullStack },
+    {
+      id: "client-focused",
+      label: t('toggle_options.client_focused'),
+      image: clientFocused,
+    },
+  ];
 
   useEffect(() => {
     // Separate scroll handler for toggle functionality
@@ -110,14 +110,14 @@ export default function ServiceSection() {
     <div className="max-w-7xl mx-auto py-16 md:py-24">
         <div className="text-center mb-16 space-y-4">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold max-w-4xl mx-auto leading-tight">
-            You don&apos;t have a traffic problem...
+          {t('service_problem_global_title1')}
             <br />
-            you&apos;re failing to convert that traffic
-        <br />
+            {t('service_problem_global_title2')}
+          <br />
             into leads.
           </h1>
           <p className="text-gray-400 text-xl md:text-2xl">
-            The REAL challenge is turning clicks into conversions.
+          {t("service_problem_global_paragraph")}
           </p>
         </div>
 
@@ -125,11 +125,11 @@ export default function ServiceSection() {
           <Card className="border-none bg-transparent">
             <CardHeader>
               <HelpCircle className="w-12 h-12 text-white mb-4" />
-              <h2 className="text-xl font-semibold text-white">Lost in the Competition</h2>
+              <h2 className="text-xl font-semibold text-white">{t('service_problem_title1')}</h2>
             </CardHeader>
             <CardContent>
               <p className="text-gray-400">
-                In a sea of competitors, it&apos;s hard to make your brand stand out when everyone is fighting for attention.
+                {t('service_problem_details1')}
               </p>
             </CardContent>
           </Card>
@@ -137,11 +137,11 @@ export default function ServiceSection() {
           <Card className="border-none bg-transparent">
             <CardHeader>
               <Frown className="w-12 h-12 text-white mb-4" />
-              <h2 className="text-xl font-semibold text-white">Leads not Following</h2>
+              <h2 className="text-xl font-semibold text-white">{t('service_problem_title2')}</h2>
             </CardHeader>
             <CardContent>
               <p className="text-gray-400">
-                Struggling to turn site visitors into leads? Your strategies might be missing the mark with your target audience.
+              {t('service_problem_details2')}
               </p>
             </CardContent>
           </Card>
@@ -149,11 +149,11 @@ export default function ServiceSection() {
           <Card className="border-none bg-transparent">
             <CardHeader>
               <RefreshCw className="w-12 h-12 text-white mb-4" />
-              <h2 className="text-xl font-semibold text-white">Customer Conversion Challenges</h2>
+              <h2 className="text-xl font-semibold text-white">{t('service_problem_title3')}</h2>
             </CardHeader>
             <CardContent>
               <p className="text-gray-400">
-                Getting clicks is just the start. The real challenge lies in converting those clicks into loyal customers.
+              {t('service_problem_details3')}
               </p>
             </CardContent>
           </Card>
@@ -169,14 +169,14 @@ export default function ServiceSection() {
           
           <div className="text-center mb-16 space-y-6 relative z-10">
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold max-w-4xl mx-auto leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-100">
-              The solution:
+            {t('service_solution_global_title1')}
               <br />
-              Conversion-focused design.
+              {t('service_solution_global_title2')}
             </h1>
             <p className="text-gray-300 text-xl md:text-2xl">
-              Designs that captivate, copy that resonates, and development that converts.
+            {t('service_solution_global_paragraph1')}
               <br />
-              Moving beyond surface metrics to emotional impact that turns browsers into buyers.
+              {t('service_solution_global_paragraph2')}
             </p>
           </div>
 
@@ -184,11 +184,11 @@ export default function ServiceSection() {
             <Card className="border border-white/10 bg-gray-800/50 backdrop-blur-sm hover:bg-gray-800/70 transition-all duration-300">
               <CardHeader>
                 <Star className="w-12 h-12 text-white mb-4" />
-                <h2 className="text-xl font-semibold text-white">Compelling Copy</h2>
+                <h2 className="text-xl font-semibold text-white">{t('service_solution_title1')}</h2>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-400">
-                Crafting words that engage, resonate, and ultimately convince your audience to take action.
+              {t('service_solution_details1')}
                 </p>
               </CardContent>
             </Card>
@@ -196,11 +196,11 @@ export default function ServiceSection() {
             <Card className="border border-white/10 bg-gray-800/50 backdrop-blur-sm hover:bg-gray-800/70 transition-all duration-300">
               <CardHeader>
                 <Gem className="w-12 h-12 text-white mb-4" />
-                <h2 className="text-xl font-semibold text-white">Brand Identity</h2>
+                <h2 className="text-xl font-semibold text-white">{t('service_solution_title2')}</h2>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-400">
-                Design a brand identity to standout in a crowded marketplace.
+                {t('service_solution_details2')}
                 </p>
               </CardContent>
             </Card>
@@ -208,11 +208,11 @@ export default function ServiceSection() {
             <Card className="border border-white/10 bg-gray-800/50 backdrop-blur-sm hover:bg-gray-800/70 transition-all duration-300">
               <CardHeader>
                 <DollarSign className="w-12 h-12 text-white mb-4" />
-                <h2 className="text-xl font-semibold text-white">Conversion-focused Design</h2>
+                <h2 className="text-xl font-semibold text-white">{t('service_solution_title3')}</h2>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-400">
-                Creating visually appealing designs that are optimized for maximum conversion rates.
+                {t('service_solution_details3')}
                 </p>
               </CardContent>
             </Card>
@@ -225,11 +225,11 @@ export default function ServiceSection() {
 
 
 
-      <div ref={sectionRef} className="container bg-gray-100 mx-auto px-4 md:px-8 lg:px-16 py-16 md:py-24">
+      <div ref={whyMeRef} className="container bg-gray-100 mx-auto px-4 md:px-8 lg:px-16 py-16 md:py-24">
         <h3 className="text-gray-900 text-5xl font-bold mb-16">
-          Powerful software solutions,
+          {t('main_service_title1')}
           <br />
-          tailored to your success
+          {t('main_service_title2')}
         </h3>
 
         <div className="sticky top-4 z-10 hidden md:block">
@@ -268,11 +268,7 @@ export default function ServiceSection() {
                   {option.id === "full-stack" && (
                     <>
                       <p className="mb-4 text-xl text-gray-700">
-                        As a full-stack developer, I offer end-to-end solutions
-                        that seamlessly integrate front-end and back-end
-                        technologies. From responsive user interfaces to robust
-                        server-side applications, I ensure your project is built
-                        with scalability and performance in mind.
+                     {t('main_service_paragraph1')} 
                       </p>
                       <Link href="https://calendly.com/gkitoko-pro" target="_blank">
                         <motion.button
@@ -280,7 +276,7 @@ export default function ServiceSection() {
                           whileTap={{ scale: 0.95 }}
                           className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
                         >
-                          Start Boosting Your Conversions Now
+                         {t('cta_buttons.boost_conversions')}
                         </motion.button>
                       </Link>
                     </>
@@ -288,11 +284,7 @@ export default function ServiceSection() {
                   {option.id === "mobile-web" && (
                     <>
                       <p className="mb-4 text-xl text-gray-700">
-                        I specialize in creating responsive web applications and
-                        native mobile apps that provide a consistent user
-                        experience across all devices. Whether you need a
-                        progressive web app or a native mobile solution, I can
-                        deliver a product that meets your users' needs.
+                      {t('main_service_paragraph2')} 
                       </p>
                       <Link href="https://calendly.com/gkitoko-pro" target="_blank">
                         <motion.button
@@ -300,7 +292,8 @@ export default function ServiceSection() {
                           whileTap={{ scale: 0.95 }}
                           className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
                         >
-                          Upgrade Your Website Design
+                          {t('cta_buttons.upgrade_website')}
+                         
                         </motion.button>
                       </Link>
                     </>
@@ -308,12 +301,7 @@ export default function ServiceSection() {
                   {option.id === "tech-stack" && (
                     <>
                       <p className="mb-4 text-xl text-gray-700">
-                        I stay at the forefront of technology, leveraging the
-                        latest tools and frameworks to build cutting-edge
-                        applications. My expertise includes modern JavaScript
-                        frameworks, cloud services, and emerging technologies to
-                        ensure your project is built with the best tools for the
-                        job.
+                      {t('main_service_paragraph3')} 
                       </p>
                       <Link href="https://calendly.com/gkitoko-pro" target="_blank">
                         <motion.button
@@ -321,7 +309,8 @@ export default function ServiceSection() {
                           whileTap={{ scale: 0.95 }}
                           className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
                         >
-                          Modernize Your Tech Stack
+                          {t('cta_buttons.modernize_tech')}
+                        
                         </motion.button>
                       </Link>
                     </>
@@ -329,27 +318,16 @@ export default function ServiceSection() {
                   {option.id === "client-focused" && (
                     <div>
                       <p className="mb-4 text-xl text-gray-700">
-                        I believe in true partnership with my clients. From the
-                        initial concept to the final deployment, I'm committed
-                        to accompanying you through every step of the project.
-                        My approach is centered on open communication, regular
-                        updates, and always finding time to discuss your needs
-                        and concerns.
+                        {t('main_service_paragraph4')} 
                       </p>
-                      <p className="mb-4 text-xl text-gray-700">
-                        By choosing to work with me, you're not just getting a
-                        developer – you're getting a dedicated partner who is
-                        invested in your project's success. I ensure that your
-                        vision is realized while providing expert guidance and
-                        support throughout the entire development process.
-                      </p>
+                      
                       <Link href="https://calendly.com/gkitoko-pro" target="_blank">
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
                           className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
                         >
-                          Let's Book a Call with Gabriel
+                          {t('cta_buttons.book_call')}
                         </motion.button>
                       </Link>
                     </div>

@@ -11,10 +11,12 @@ import Flutter from "@/public/assets/images/flutter.png";
 import NextJs from "@/public/assets/images/Next-JS.png";
 import AnimatedCodeEditor from "../animatedCode/animatedCode";
 import FloatingCTA from "../FloatingCTA";
+import LanguageChanger from "../language-changer/LangageChanger";
 import  JuliaPics from "@/public/assets/images/founders/julia.png";
 import lamala from "@/public/assets/images/founders/lamala.png";
 import olivier from "@/public/assets/images/founders/olivier.jpg";
 import stanley from "@/public/assets/images/founders/stanley.png";
+import { useTranslations } from 'next-intl';
 
 interface LandingPageProps {
   whyMeRef: React.RefObject<HTMLDivElement>;
@@ -22,6 +24,8 @@ interface LandingPageProps {
   processRef: React.RefObject<HTMLDivElement>;
   faqsRef: React.RefObject<HTMLDivElement>;
   presentationRef: React.RefObject<HTMLDivElement>;
+  locale : string;
+
 }
 
 export default function LandingPage({
@@ -30,12 +34,15 @@ export default function LandingPage({
   workRef,
   processRef,
   faqsRef,
+  locale,
 }: LandingPageProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const socialProofBannerRef = useRef<HTMLDivElement>(null);
   const sociaProofArray = ["LAZONEGRISE", "ATELIER-SOI", "JIFFYPREP-INTERVIEWS", "OKPROD", "GROF", "LAZONEGRISE"];
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const t = useTranslations('navbar');
+  const h = useTranslations('hero')
 
   useEffect(() => {
     const ProofBanner = socialProofBannerRef.current;
@@ -134,7 +141,7 @@ export default function LandingPage({
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                   </span>
-                  <span className="">Ready to help</span>
+                  <span className="">{t('presence')}</span>
                 </p>
               </div>
             </div>
@@ -148,7 +155,7 @@ export default function LandingPage({
                     onClick={() => scrollToSection(whyMeRef)}
                     className="text-gray-600 hover:text-gray-900"
                   >
-                    Why me
+                    {t('section1')}
                   </button>
                 </li>
                 <li>
@@ -156,7 +163,7 @@ export default function LandingPage({
                     onClick={() => scrollToSection(workRef)}
                     className="text-gray-600 hover:text-gray-900"
                   >
-                    Work
+                    {t('section2')}
                   </button>
                 </li>
 
@@ -168,6 +175,9 @@ export default function LandingPage({
                     FAQs
                   </button>
                 </li>
+                <li>
+                  <LanguageChanger locale={locale}/>
+                </li>
                 
                 <li>
                   
@@ -176,7 +186,7 @@ export default function LandingPage({
                     target="_blank"
                     className="text-white font-semibold text-lg bg-indigo-600 hover:bg-indigo-800 px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                   >
-                    Book a call
+                    {t('cta_button')}
                     <motion.span
                       className="ml-2 inline-block"
                       initial={{ x: 0 }}
@@ -203,7 +213,7 @@ export default function LandingPage({
                     onClick={() => scrollToSection(whyMeRef)}
                     className="block py-2 text-gray-600 hover:text-gray-900"
                   >
-                    Why me
+                     {t('section1')}
                   </button>
                 </li>
                 <li>
@@ -211,7 +221,7 @@ export default function LandingPage({
                     onClick={() => scrollToSection(workRef)}
                     className="block py-2 text-gray-600 hover:text-gray-900"
                   >
-                    Work
+                     {t('section2')}
                   </button>
                 </li>
 
@@ -224,12 +234,15 @@ export default function LandingPage({
                   </button>
                 </li>
                 <li>
+                  <LanguageChanger locale={locale}/>
+                </li>
+                <li>
                   <motion.a
                     href="https://calendly.com/gkitoko-pro"
                     target="_blank"
                     className="text-white font-semibold text-lg bg-indigo-600 hover:bg-indigo-800 px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                   >
-                    Book a call
+                    {t('cta_button')}
                     <motion.span
                       className="ml-2 inline-block"
                       initial={{ x: 0 }}
@@ -266,7 +279,7 @@ export default function LandingPage({
               <div className="flex justify-center md:justify-start text-lg">
                 ⭐⭐⭐⭐⭐
               </div>
-              <span className="text-lg">20+ Business owners love my work</span>
+              <span className="text-lg">{h('social_proof')}</span>
             </div>
           </motion.div>
 
@@ -276,21 +289,33 @@ export default function LandingPage({
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
           >
-            Get a high-quality B2B website
+            {h('main_hook1')}
             <br />
-            that turns your curious visitors into customers.
+            {h('main_hook2')}
           </motion.h2>
+         
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-gray-600 mb-10"
           >
-            Using <span className="line-through">no-code tools</span> last
-            engineering tools and best practices, I create websites that
-            <span className="font-bold text-black"> increase visitor trust</span>{" "}
-            and <span className="font-bold text-black">engagement</span>.
+            {locale === 'fr' ? (
+              <>
+                En utilisant <span className="line-through">des outils no-code</span> les derniers outils d'ingénierie et les meilleures pratiques, je crée des sites web qui{' '}
+                <span className="font-bold text-black">augmentent la confiance</span>{' '}
+                et <span className="font-bold text-black">l'engagement des visiteurs</span>.
+              </>
+            ) : (
+              <>
+                Using <span className="line-through">no-code tools</span> last engineering tools and best practices, I create websites that{' '}
+                <span className="font-bold text-black">increase visitor trust</span>{' '}
+                and <span className="font-bold text-black">engagement</span>.
+              </>
+            )}
           </motion.p>
+              
+            
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -303,7 +328,7 @@ export default function LandingPage({
               className="group bg-indigo-600 hover:bg-indigo-800 text-white px-16 py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center text-xl font-bold"
               whileHover={{ scale: 1.05 }}
             >
-              Claim Your Free Strategy Call Now
+            {h('cta_principal')}
               <motion.span
                 className="ml-3 inline-block text-2xl"
                 initial={{ x: 0 }}

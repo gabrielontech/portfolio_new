@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { notFound } from 'next/navigation';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { locales } from '@/navigation';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
-import "./globals.css";
+import "../globals.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,11 +26,19 @@ website / mobile developer`,
 
 export default function RootLayout({
   children,
+  params: { locale }
 }: Readonly<{
   children: React.ReactNode;
+  params: any
 }>) {
+  if (!locales.includes(locale)) {
+    notFound();
+  }
+
+  const messages = useMessages();
   return (
-    <html lang="en">
+    <html lang={locale}>
+      <NextIntlClientProvider locale={locale} messages={messages}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -35,6 +46,7 @@ export default function RootLayout({
         <SpeedInsights />
         <Analytics />
       </body>
+      </NextIntlClientProvider>
     </html>
   );
 }
