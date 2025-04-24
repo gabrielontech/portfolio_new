@@ -21,7 +21,7 @@ import AtelierSoi from "@/public/assets/images/ateliersoi.png";
 import ZoneGrise from "@/public/assets/images/zoneGrise.png";
 import xpertOne from "@/public/assets/images/xpertOne.png";
 import JiffyPrep from "@/public/assets/images/grof.png";
-import OkFormation from "@/public/assets/images/okformation.png";
+import okformation from "@/public/assets/images/okformation.png";
 
 const getCards = (t: any) => [
   {
@@ -38,7 +38,7 @@ const getCards = (t: any) => [
     description: t('okformation.description'),
     buttonText: t('okformation.buttonText'),
     projectUrl: "https://www.okformation.online/",
-    image: OkFormation.src,
+    image: okformation.src,
   },
   {
     title: t('Grof.title'),
