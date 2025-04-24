@@ -49,6 +49,7 @@ export default function ServiceSection({
   const [activeToggle, setActiveToggle] = useState("full-stack");
   const sectionRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLDivElement>(null);
+  const sectionsContainerRef = useRef<HTMLDivElement>(null);
   const t = useTranslations('services');
 
   const toggleOptions = [
@@ -63,32 +64,57 @@ export default function ServiceSection({
   ];
 
   useEffect(() => {
-    // Separate scroll handler for toggle functionality
     const handleScroll = () => {
-      if (sectionRef.current && toggleRef.current) {
-        const sectionRect = sectionRef.current.getBoundingClientRect();
-        const toggleRect = toggleRef.current.getBoundingClientRect();
+      if (sectionsContainerRef.current && toggleRef.current) {
+        const viewportHeight = window.innerHeight;
+        const toggleHeight = toggleRef.current.offsetHeight;
+        
+        // Get all section elements
+        const sections = toggleOptions.map(option => document.getElementById(option.id)).filter(Boolean);
+        
+        // Find which section is most visible
+        let maxVisibleRatio = 0;
+        let mostVisibleSection = activeToggle;
 
-        const bufferZone = window.innerHeight * 0.25;
+        sections.forEach((section) => {
+          if (section) {
+            const rect = section.getBoundingClientRect();
+            
+            // Calculate visibility ratio
+            const visibleHeight = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, toggleHeight);
+            const totalHeight = rect.height;
+            const visibilityRatio = Math.max(0, visibleHeight / totalHeight);
 
-        toggleOptions.forEach((option) => {
-          const element = document.getElementById(option.id);
-          if (element) {
-            const rect = element.getBoundingClientRect();
-            if (
-              rect.top <= toggleRect.height + bufferZone &&
-              rect.bottom > toggleRect.height - bufferZone
-            ) {
-              setActiveToggle(option.id);
+            // Update if this section is more visible
+            if (visibilityRatio > maxVisibleRatio) {
+              maxVisibleRatio = visibilityRatio;
+              mostVisibleSection = section.id;
             }
           }
         });
+
+        // Only update if we have a new most visible section
+        if (mostVisibleSection !== activeToggle && maxVisibleRatio > 0.3) {
+          setActiveToggle(mostVisibleSection);
+        }
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    // Add scroll listener with throttling for performance
+    let ticking = false;
+    const scrollListener = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', scrollListener, { passive: true });
+    return () => window.removeEventListener('scroll', scrollListener);
+  }, [activeToggle, toggleOptions]);
 
   const handleToggleClick = (id: string) => {
     setActiveToggle(id);
@@ -220,11 +246,6 @@ export default function ServiceSection({
         </Card>
       </div>
 
-
- 
-
-
-
       <div ref={whyMeRef} className="container bg-gray-100 mx-auto px-4 md:px-8 lg:px-16 py-16 md:py-24">
         <h3 className="text-gray-900 text-5xl font-bold mb-16">
           {t('main_service_title1')}
@@ -255,161 +276,168 @@ export default function ServiceSection({
           </div>
         </div>
 
-        {toggleOptions.map((option) => (
-          <div key={option.id} id={option.id} className="mb-20">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+        <div ref={sectionsContainerRef}>
+          {toggleOptions.map((option) => (
+            <div 
+              key={option.id} 
+              id={option.id} 
+              className="mb-20 min-h-[500px]"
             >
-              <div className="flex flex-col md:flex-row items-start">
-                <div className="md:w-1/2 pr-8">
-                  <h4 className="text-3xl font-bold mb-4 text-gray-900">{option.label}</h4>
-                  {option.id === "full-stack" && (
-                    <>
-                      <p className="mb-4 text-xl text-gray-700">
-                     {t('main_service_paragraph1')} 
-                      </p>
-                      <Link href="https://calendly.com/gkitoko-pro" target="_blank">
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
-                        >
-                         {t('cta_buttons.boost_conversions')}
-                        </motion.button>
-                      </Link>
-                    </>
-                  )}
-                  {option.id === "mobile-web" && (
-                    <>
-                      <p className="mb-4 text-xl text-gray-700">
-                      {t('main_service_paragraph2')} 
-                      </p>
-                      <Link href="https://calendly.com/gkitoko-pro" target="_blank">
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
-                        >
-                          {t('cta_buttons.upgrade_website')}
-                         
-                        </motion.button>
-                      </Link>
-                    </>
-                  )}
-                  {option.id === "tech-stack" && (
-                    <>
-                      <p className="mb-4 text-xl text-gray-700">
-                      {t('main_service_paragraph3')} 
-                      </p>
-                      <Link href="https://calendly.com/gkitoko-pro" target="_blank">
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
-                        >
-                          {t('cta_buttons.modernize_tech')}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="flex flex-col md:flex-row items-start">
+                  <div className="md:w-1/2 pr-8">
+                    <h4 className="text-3xl font-bold mb-4 text-gray-900">{option.label}</h4>
+                    {option.id === "full-stack" && (
+                      <>
+                        <p className="mb-4 text-xl text-gray-700">
+                       {t('main_service_paragraph1')} 
+                        </p>
+                        <Link href="https://calendly.com/gkitoko-pro" target="_blank">
+                          <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
+                          >
+                           {t('cta_buttons.boost_conversions')}
+                          </motion.button>
+                        </Link>
+                      </>
+                    )}
+                    {option.id === "mobile-web" && (
+                      <>
+                        <p className="mb-4 text-xl text-gray-700">
+                        {t('main_service_paragraph2')} 
+                        </p>
+                        <Link href="https://calendly.com/gkitoko-pro" target="_blank">
+                          <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
+                          >
+                            {t('cta_buttons.upgrade_website')}
+                           
+                          </motion.button>
+                        </Link>
+                      </>
+                    )}
+                    {option.id === "tech-stack" && (
+                      <>
+                        <p className="mb-4 text-xl text-gray-700">
+                        {t('main_service_paragraph3')} 
+                        </p>
+                        <Link href="https://calendly.com/gkitoko-pro" target="_blank">
+                          <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
+                          >
+                            {t('cta_buttons.modernize_tech')}
+                          
+                          </motion.button>
+                        </Link>
+                      </>
+                    )}
+                    {option.id === "client-focused" && (
+                      <div>
+                        <p className="mb-4 text-xl text-gray-700">
+                          {t('main_service_paragraph4')} 
+                        </p>
                         
-                        </motion.button>
-                      </Link>
-                    </>
+                        <Link href="https://calendly.com/gkitoko-pro" target="_blank">
+                          <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
+                          >
+                            {t('cta_buttons.book_call')}
+                          </motion.button>
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+
+                  {option.id !== "tech-stack" && (
+                    <div className="md:w-1/2 mt-8 md:mt-0 w-full">
+                      <motion.div
+                        className="w-full h-full overflow-hidden rounded-lg"
+                        whileHover={{
+                          boxShadow: "0 0 8px 2px rgba(255, 255, 255, 0.3)",
+                        }}
+                      >
+                        <Image
+                          src={option.image}
+                          alt={option.label}
+                          
+                          width={400}
+                          height={300}
+                          style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+                        />
+                        {/* <motion.div
+                          className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 mix-blend-overlay"
+                          initial={{ x: "-100%" }}
+                          animate={{ x: "100%" }}
+                          transition={{
+                            repeat: Infinity,
+                            duration: 3,
+                            ease: "linear",
+                          }}
+                        /> */}
+                      </motion.div>
+                    </div>
                   )}
-                  {option.id === "client-focused" && (
-                    <div>
-                      <p className="mb-4 text-xl text-gray-700">
-                        {t('main_service_paragraph4')} 
-                      </p>
-                      
-                      <Link href="https://calendly.com/gkitoko-pro" target="_blank">
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
-                        >
-                          {t('cta_buttons.book_call')}
-                        </motion.button>
-                      </Link>
+
+                  {option.id === "tech-stack" && (
+                    <div className="md:w-1/2 mt-8 md:mt-0">
+                      <div className="grid grid-cols-3 gap-4">
+                        {technologies.map((tech) => (
+                          <motion.div
+                            key={tech.name}
+                            className="flex flex-col items-center"
+                            whileHover={{ scale: 1.05 }}
+                          >
+                            <motion.div
+                              className="w-16 h-16 mb-2 relative overflow-hidden rounded-lg"
+                              whileHover={{
+                                boxShadow: "0 0 8px 2px rgba(255, 255, 255, 0.3)",
+                              }}
+                            >
+                              <Image
+                                src={tech.logo}
+                                alt={`${tech.name} logo`}
+                                fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                style={{ objectFit: 'contain' }}
+                              />
+                              <motion.div
+                                className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 mix-blend-overlay"
+                                initial={{ x: "-100%" }}
+                                animate={{ x: "100%" }}
+                                transition={{
+                                  repeat: Infinity,
+                                  duration: 3,
+                                  ease: "linear",
+                                }}
+                              />
+                            </motion.div>
+                            <span className="text-sm text-gray-700 text-center font-medium">
+                              {tech.name}
+                            </span>
+                          </motion.div>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>
-
-                {option.id !== "tech-stack" && (
-                  <div className="md:w-1/2 mt-8 md:mt-0 w-full">
-                    <motion.div
-                      className="w-full h-full overflow-hidden rounded-lg"
-                      whileHover={{
-                        boxShadow: "0 0 8px 2px rgba(255, 255, 255, 0.3)",
-                      }}
-                    >
-                      <Image
-                        src={option.image}
-                        alt={option.label}
-                        
-                        width={400}
-                        height={300}
-                        style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
-                      />
-                      {/* <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 mix-blend-overlay"
-                        initial={{ x: "-100%" }}
-                        animate={{ x: "100%" }}
-                        transition={{
-                          repeat: Infinity,
-                          duration: 3,
-                          ease: "linear",
-                        }}
-                      /> */}
-                    </motion.div>
-                  </div>
-                )}
-
-                {option.id === "tech-stack" && (
-                  <div className="md:w-1/2 mt-8 md:mt-0">
-                    <div className="grid grid-cols-3 gap-4">
-                      {technologies.map((tech) => (
-                        <motion.div
-                          key={tech.name}
-                          className="flex flex-col items-center"
-                          whileHover={{ scale: 1.05 }}
-                        >
-                          <motion.div
-                            className="w-16 h-16 mb-2 relative overflow-hidden rounded-lg"
-                            whileHover={{
-                              boxShadow: "0 0 8px 2px rgba(255, 255, 255, 0.3)",
-                            }}
-                          >
-                            <Image
-                              src={tech.logo}
-                              alt={`${tech.name} logo`}
-                              fill
-                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                              style={{ objectFit: 'contain' }}
-                            />
-                            <motion.div
-                              className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 mix-blend-overlay"
-                              initial={{ x: "-100%" }}
-                              animate={{ x: "100%" }}
-                              transition={{
-                                repeat: Infinity,
-                                duration: 3,
-                                ease: "linear",
-                              }}
-                            />
-                          </motion.div>
-                          <span className="text-sm text-gray-700 text-center font-medium">
-                            {tech.name}
-                          </span>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </motion.div>
-          </div>
-        ))}
+              </motion.div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
+
