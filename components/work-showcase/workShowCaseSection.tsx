@@ -15,6 +15,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+
 // Import images
 import AtelierSoi from "@/public/assets/images/ateliersoi.png";
 import ZoneGrise from "@/public/assets/images/zoneGrise.png";
