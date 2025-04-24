@@ -20,8 +20,8 @@ import "swiper/css/navigation";
 import AtelierSoi from "@/public/assets/images/ateliersoi.png";
 import ZoneGrise from "@/public/assets/images/zoneGrise.png";
 import xpertOne from "@/public/assets/images/xpertOne.png";
-import JiffyPrep from "@/public/assets/images/grof.png";
-import okformation from "@/public/assets/images/okformation.png";
+import Grof from "@/public/assets/images/grof1.png";
+import Okformation from "@/public/assets/images/okformation1.png";
 
 const getCards = (t: any) => [
   {
@@ -38,7 +38,7 @@ const getCards = (t: any) => [
     description: t('okformation.description'),
     buttonText: t('okformation.buttonText'),
     projectUrl: "https://www.okformation.online/",
-    image: okformation.src,
+    image: Okformation.src,
   },
   {
     title: t('Grof.title'),
@@ -46,7 +46,7 @@ const getCards = (t: any) => [
     description: t('Grof.description'),
     buttonText: t('Grof.buttonText'),
     projectUrl: "https://grof-site.vercel.app/",
-    image: JiffyPrep.src,
+    image: Grof.src,
   },
   {
     title: t('zonegrise.title'),
