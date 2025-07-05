@@ -12,9 +12,9 @@ export default function HomePage() {
     <main className="bg-gradient-to-br from-gray-800 to-gray-900 text-white min-h-screen">
       <Navbar />
       <HeroSection />
-      <TechStack />
       <HowItWorks />
       <WhyMe />
+      <TechStack />
       <CaseStudies />
       <ContactCTA />
     </main>
