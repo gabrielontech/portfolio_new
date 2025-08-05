@@ -5,23 +5,23 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 const steps = [
     {
         title: 'Idea Validation',
-        description: 'We start by understanding your vision and validating your idea to ensure it meets market needs.',
+        description: 'I start by understanding your vision and validating your idea to ensure it meets market needs.',
     },
     {
         title: 'Prototyping',
-        description: 'We create a prototype to visualize your idea, allowing for feedback and adjustments before development.',
+        description: 'I create a prototype to visualize your idea, allowing for feedback and adjustments before development.',
     },
     {
         title: 'Development',
-        description: 'Our team develops your MVP using the latest technologies, ensuring a robust and scalable solution.',
+        description: 'I develop your MVP using the latest technologies, ensuring a robust and scalable solution.',
     },
     {
         title: 'Testing',
-        description: 'We conduct thorough testing to ensure your MVP is functional, user-friendly, and ready for launch.',
+        description: 'I conduct thorough testing to ensure your MVP is functional, user-friendly, and ready for launch.',
     },
     {
         title: 'Launch',
-        description: 'Finally, we help you launch your MVP, providing support and guidance to ensure a successful entry into the market.',
+        description: 'Finally, I help you launch your MVP, providing support and guidance to ensure a successful entry into the market.',
     },
 ];
 
@@ -88,7 +88,7 @@ const HowItWorks = () => {
     return (
         <section
             ref={ref}
-            className="py-32 bg-gradient-to-br from-[#101c36] to-black text-white flex flex-col items-center"
+            className="py-32 text-white flex flex-col items-center"
             style={{ minHeight: WAVE_HEIGHT + 200 }}
         >
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 via-blue-400 to-blue-600 bg-clip-text text-transparent drop-shadow-lg">
@@ -158,9 +158,11 @@ const HowItWorks = () => {
                     <motion.circle
                         r={16}
                         fill="url(#dot-gradient)"
-                        style={{
+                        animate={{
                             cx: dotPos.get().x,
                             cy: dotPos.get().y,
+                        }}
+                        style={{
                             filter: 'drop-shadow(0 0 16px #818cf8) drop-shadow(0 0 32px #818cf8)',
                         }}
                     />

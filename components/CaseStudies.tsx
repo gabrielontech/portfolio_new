@@ -1,31 +1,113 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
+import CaseStudyCard, { CaseStudy } from './CaseStudyCard';
+import XpertOne from '@/public/assets/projects/xpertOne.webp';
+import zoneGrise from '@/public/assets/projects/zoneGrise.webp';
+import okFormation from '@/public/assets/projects/okformation1.webp';
+import grof1 from '@/public/assets/projects/grof1.webp';
+import fitnezzy from '@/public/assets/projects/fitnezzy.jpg';
+import ateliersoi from '@/public/assets/projects/ateliersoi.webp';
+
+
+
+const projects: CaseStudy[] = [
+  {
+    title: 'Xpert One',
+    description:
+      'I developed a website that connects expert professionals with businesses. This project included creating a dynamic landing page and implementing a custom CRM system to manage client relationships and expert profiles.',
+    image: XpertOne.src,
+    type: 'SaaS',
+    tag: 'WEB DESIGN & DEV',
+    link: 'https://example.com',
+  },
+  {
+    title: 'Zone Grise',
+    description:
+      'I developed an e-commerce site for a life coach, offering online training courses. The site integrates Stripe for secure payment processing, providing a smooth purchasing experience for customers buying digital products.',
+    image: zoneGrise.src,
+    type: 'Websites',
+    tag: 'WEB DESIGN & E-COMMERCE',
+    link: 'https://example.com',
+  },
+  {
+    title: 'Ok Formation',
+    description:
+      'I designed and developed a high-converting landing page for OkFormation, a leading online training platform. This page showcases their expert-led courses on popular design tools like Adobe XD, Figma, and Canva.',
+    image: okFormation.src,
+    type: 'Websites',
+    tag: 'WEB DESIGN & DEV',
+    link: 'https://example.com',
+  },
+  {
+    title: 'Grof',
+    description:
+      'Grof, sales ops agency dedicated to sales performance. They help to connect directly with decision-makers and accelerate sales cycles.',
+    image: grof1.src,
+    type: 'Websites',
+    tag: 'WEB DESIGN & DEV',
+    link: 'https://example.com',
+  },
+  {
+    title: 'Fitnezzy App',
+    description: 'A fitness app that allows users to book on-demand workout sessions with personal trainers and gym classes.',
+    image: fitnezzy.src,
+    type: 'Mobile App',
+    tag: 'MOBILE APP',
+    status: 'shutdown',
+  },
+  {
+    title: 'SaaS Analytics Platform',
+    description:
+      'A SaaS platform for real-time analytics and reporting for e-commerce businesses.',
+    image: '/images/case-study-saas.jpg',
+    type: 'SaaS',
+    tag: 'SaaS PLATFORM',
+    link: 'https://example.com/saas',
+  },
+  
+];
+
+const filters = ['All', 'Mobile App', 'Websites', 'SaaS'] as const;
 
 const CaseStudies = () => {
+  const [activeFilter, setActiveFilter] = useState<typeof filters[number]>('All');
+
+  const filteredProjects =
+    activeFilter === 'All'
+      ? projects
+      : projects.filter((p) => p.type === activeFilter);
+
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
+    <section className="py-20 ">
       <div className="container mx-auto px-4">
-        <h2 className="text-white text-3xl font-bold mb-8 text-center">
-          Upcoming Case Studies
+        <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-purple-400 via-blue-400 to-blue-600 bg-clip-text text-transparent text-center">
+          Recent Work
         </h2>
-        <p className="text-gray-400 text-lg mb-12 text-center">
-          Stay tuned for our exciting projects that showcase our expertise in SaaS MVP development.
-        </p>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Placeholder for case studies */}
-          <div className="bg-gray-700 rounded-2xl p-6 shadow-lg">
-            <h3 className="text-xl font-semibold text-white mb-2">Project Title 1</h3>
-            <p className="text-gray-300">Brief description of the project and its impact.</p>
-          </div>
-          <div className="bg-gray-700 rounded-2xl p-6 shadow-lg">
-            <h3 className="text-xl font-semibold text-white mb-2">Project Title 2</h3>
-            <p className="text-gray-300">Brief description of the project and its impact.</p>
-          </div>
-          <div className="bg-gray-700 rounded-2xl p-6 shadow-lg">
-            <h3 className="text-xl font-semibold text-white mb-2">Project Title 3</h3>
-            <p className="text-gray-300">Brief description of the project and its impact.</p>
+        <div className="flex justify-center mb-12">
+          <div className="bg-gray-900 bg-opacity-60 rounded-full px-6 py-2 flex gap-4 text-gray-300 text-sm font-medium shadow-lg">
+            {filters.map((filter) => (
+              <button
+                key={filter}
+                onClick={() => setActiveFilter(filter)}
+                className={`px-4 py-1 rounded-full transition font-semibold
+                  ${filter === activeFilter
+                    ? 'bg-blue-900 text-blue-400 shadow'
+                    : 'hover:text-blue-300'}
+                `}
+              >
+                {filter}
+              </button>
+            ))}
           </div>
         </div>
+        {filteredProjects.length === 0 ? (
+          <div className="text-center text-gray-400 py-20">No projects to display.</div>
+        ) : (
+          filteredProjects.map((project, idx) => (
+            <CaseStudyCard key={idx} project={project} />
+          ))
+        )}
       </div>
     </section>
   );

@@ -37,7 +37,7 @@ const Navbar = () => {
         show ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       }`}
     >
-      <div className="flex items-center backdrop-blur-md rounded-full shadow-2xl px-8 py-3 gap-8 border border-gray-700">
+      <div className="flex items-center backdrop-blur-md rounded-full shadow-2xl px-10 py-3 gap-8 border border-gray-700">
         {/* Avatar */}
         <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white flex-shrink-0">
           <Image
@@ -64,9 +64,10 @@ const Navbar = () => {
         {/* CTA */}
         <a
           href="#contact"
-          className="ml-6 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-2 px-5 rounded-full shadow-lg text-base transition-all duration-200"
+          className="inline-flex items-center ml-6 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-2 px-5 rounded-full shadow-lg text-base transition-all duration-200"
         >
-          Let’s Build Yours →
+          <span className='text-center'>Let’s Build Yours</span>
+          <span className="ml-2 text-xl">→</span>
         </a>
       </div>
     </nav>

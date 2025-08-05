@@ -28,12 +28,11 @@ const companies = [
   { name: 'RTE France', logo: '/logos/rte.png' },
   { name: '42 Entrepreneurs', logo: '/logos/42.png' },
   { name: 'Grof', logo: '/logos/grof.png' },
-  // Add more as needed
 ];
 
 const HeroSection = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center h-screen bg-gradient-to-br from-[#0a1124] via-[#101c36] to-black text-white p-4">
+    <section className="flex flex-col md:flex-row items-center justify-center h-screen text-white p-4">
       {/* Left Side */}
       <div className="w-full md:w-1/2 text-center md:text-left max-w-2xl mx-auto md:mx-0">
         <motion.div
@@ -101,15 +100,11 @@ const HeroSection = () => {
         {/* Illustration + Encouragement */}
         <div className="flex items-center gap-4 mt-4">
           {/* Example SVG illustration */}
-          <img
-            src="/images/non-tech-founder.svg"
-            alt="Non-technical founder illustration"
-            className="w-20 h-20 object-contain"
-          />
+         
           <div className="p-4 bg-gray-800 rounded-lg shadow-lg">
             <p className="text-base text-gray-200">
               <span className="font-bold text-blue-400">You don't need to be a developer</span> to launch your SaaS.<br />
-              Most of my clients are non-technical founders—if you have an idea, I’ll help you make it real.
+              Most of my clients are non-technical founders : if you have an idea, I’ll help you make it real.
             </p>
           </div>
         </div>
