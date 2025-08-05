@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Fast, smart, and lean SaaS MVP development for non-technical founders.',
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className="bg-gradient-to-br from-gray-800 to-gray-900 text-white">
