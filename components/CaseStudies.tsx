@@ -20,7 +20,7 @@ const projects: CaseStudy[] = [
     image: XpertOne.src,
     type: 'SaaS',
     tag: 'WEB DESIGN & DEV',
-    link: 'https://example.com',
+    link: 'https://www.xpertone.fr/',
   },
   {
     title: 'Zone Grise',
@@ -29,7 +29,7 @@ const projects: CaseStudy[] = [
     image: zoneGrise.src,
     type: 'Websites',
     tag: 'WEB DESIGN & E-COMMERCE',
-    link: 'https://example.com',
+    link: 'https://www.zonagri.com/en',
   },
   {
     title: 'Ok Formation',
@@ -38,7 +38,7 @@ const projects: CaseStudy[] = [
     image: okFormation.src,
     type: 'Websites',
     tag: 'WEB DESIGN & DEV',
-    link: 'https://example.com',
+    link: 'https://www.okformation.online/',
   },
   {
     title: 'Grof',
@@ -47,7 +47,7 @@ const projects: CaseStudy[] = [
     image: grof1.src,
     type: 'Websites',
     tag: 'WEB DESIGN & DEV',
-    link: 'https://example.com',
+    link: 'https://grof-site.vercel.app/',
   },
   {
     title: 'Fitnezzy App',
