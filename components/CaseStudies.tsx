@@ -8,6 +8,7 @@ import okFormation from '@/public/assets/projects/okformation1.webp';
 import grof1 from '@/public/assets/projects/grof1.webp';
 import fitnezzy from '@/public/assets/projects/fitnezzy.jpg';
 import ateliersoi from '@/public/assets/projects/ateliersoi.webp';
+import eurosia from '@/public/assets/projects/eurosia.png';
 
 
 
@@ -57,15 +58,14 @@ const projects: CaseStudy[] = [
     status: 'shutdown',
   },
   {
-    title: 'SaaS Analytics Platform',
+    title: 'Eurosia',
     description:
-      'A SaaS platform for real-time analytics and reporting for e-commerce businesses.',
-    image: '/images/case-study-saas.jpg',
-    type: 'SaaS',
-    tag: 'SaaS PLATFORM',
-    link: 'https://example.com/saas',
+      'A dating app with live location sharing for swingers.This project has been shutdown due to app store policy.',
+    image: eurosia.src,
+    type: 'Mobile App',
+    tag: 'MOBILE APP',
+    status: 'shutdown',
   },
-  
 ];
 
 const filters = ['All', 'Mobile App', 'Websites', 'SaaS'] as const;
@@ -79,18 +79,18 @@ const CaseStudies = () => {
       : projects.filter((p) => p.type === activeFilter);
 
   return (
-    <section className="py-20 ">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-purple-400 via-blue-400 to-blue-600 bg-clip-text text-transparent text-center">
+    <section id="case-studies" className="py-12 md:py-20">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 bg-gradient-to-r from-purple-400 via-blue-400 to-blue-600 bg-clip-text text-transparent text-center leading-tight">
           Recent Work
         </h2>
-        <div className="flex justify-center mb-12">
-          <div className="bg-gray-900 bg-opacity-60 rounded-full px-6 py-2 flex gap-4 text-gray-300 text-sm font-medium shadow-lg">
+        <div className="flex justify-center mb-8 md:mb-12">
+          <div className="bg-gray-900 bg-opacity-60 rounded-full px-3 py-2 md:px-6 flex flex-wrap justify-center gap-2 md:gap-4 text-gray-300 text-xs md:text-sm font-medium shadow-lg max-w-sm md:max-w-none">
             {filters.map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-4 py-1 rounded-full transition font-semibold
+                className={`px-3 py-1 md:px-4 rounded-full transition font-semibold text-center whitespace-nowrap
                   ${filter === activeFilter
                     ? 'bg-blue-900 text-blue-400 shadow'
                     : 'hover:text-blue-300'}
@@ -102,7 +102,7 @@ const CaseStudies = () => {
           </div>
         </div>
         {filteredProjects.length === 0 ? (
-          <div className="text-center text-gray-400 py-20">No projects to display.</div>
+          <div className="text-center text-gray-400 py-12 md:py-20 text-sm md:text-base">No projects to display.</div>
         ) : (
           filteredProjects.map((project, idx) => (
             <CaseStudyCard key={idx} project={project} />
